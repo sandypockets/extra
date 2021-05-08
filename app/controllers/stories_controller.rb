@@ -10,7 +10,7 @@ class StoriesController < ApplicationController
   end
 
   def create
-    @story = Story.new(params.require(:story).permit(:title, :body, :topic))
+    @story = Story.new(form_params)
     @story.save
     redirect_to root_path
   end
@@ -23,6 +23,20 @@ class StoriesController < ApplicationController
     @story = Story.find(params[:id])
     @story.destroy
     redirect_to root_path
+  end
+
+  def edit
+    @story = Story.find(params[:id])
+  end
+
+  def update
+    @story = Story.find(params[:id])
+    @story.update(form_params)
+    redirect_to story_path(@story)
+  end
+
+  def form_params
+    params.require(:story).permit(:title, :topic, :body)
   end
 
 end
