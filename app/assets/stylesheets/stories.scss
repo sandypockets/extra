@@ -8,8 +8,7 @@ $primaryYellow: #FFC017;
 .story-show-container {
   display: flex;
   justify-content: center;
-  margin-top: 3rem;
-  max-width: 80%;
+  margin: 3rem;
 
   .story-container {
     display: flex;
@@ -23,7 +22,17 @@ $primaryYellow: #FFC017;
     }
 
     .story-content {
+      h1 {
+        display: flex;
+        justify-content: center;
+      }
 
+      p {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0 8rem 0 8rem;
+      }
     }
 
     .story-actions {
@@ -33,6 +42,8 @@ $primaryYellow: #FFC017;
     }
   }
 }
+
+
 
 // Story NEW
 .new-story-container {
@@ -80,6 +91,11 @@ $primaryYellow: #FFC017;
         h3 {
           margin-bottom: 0;
         }
+
+        p {
+          max-height: 5.5em;
+          overflow: hidden;
+        }
       }
     }
   }
@@ -90,3 +106,4 @@ $primaryYellow: #FFC017;
   height: 1px;
   margin: 2rem 1rem 2rem 1rem;
 }
+
