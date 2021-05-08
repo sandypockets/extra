@@ -4,5 +4,6 @@
 </div>
 
 <div>
-  <%= link_to 'Delete this story', story_path(@story), method: :delete %>
+  <%= link_to 'Delete this story', story_path(@story), method: :delete, data: { confirm: 'Deleting is forever. Are you sure?' } %>
+  <%= link_to 'Edit this story', edit_story_path(@story) %>
 </div>
