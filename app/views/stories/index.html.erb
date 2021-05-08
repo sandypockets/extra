@@ -5,10 +5,12 @@
 
     <div class="index-stories">
       <% @stories.each do |story| %>
+
         <div class="story-card">
         <h3><%= link_to story.title, story_path(story) %></h3>
         <p><%= story.body %></p>
         </div>
+
       <% end %>
     </div>
 
