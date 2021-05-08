@@ -1,0 +1,8 @@
+<div>
+  <h1><%= @story.title %></h1>
+  <p><%= simple_format @story.body %></p>
+</div>
+
+<div>
+  <%= link_to 'Delete this story', story_path(@story), method: :delete %>
+</div>

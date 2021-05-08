@@ -15,4 +15,14 @@ class StoriesController < ApplicationController
     redirect_to root_path
   end
 
+  def show
+    @story = Story.find(params[:id])
+  end
+
+  def destroy
+    @story = Story.find(params[:id])
+    @story.destroy
+    redirect_to root_path
+  end
+
 end
