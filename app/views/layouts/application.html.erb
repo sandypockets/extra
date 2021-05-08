@@ -10,14 +10,10 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <header>
-      <h1><%= link_to 'Extra', root_path %></h1>
-      <h2>What will you write about?</h2>
-      <nav>
-        <%= link_to 'Write', new_story_path %>
-      </nav>
-    </header>
+  <body class="app-body">
+
+    <%= render 'layouts/logged_out_header' %>
+
 
 
 
