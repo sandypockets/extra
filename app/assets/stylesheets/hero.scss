@@ -1,0 +1,17 @@
+$primaryYellow: #FFC017;
+
+.hero-container {
+
+  .hero-line {
+    background-color: black;
+    height: 1px;
+  }
+
+  .hero-background {
+    background-color: $primaryYellow;
+    height: 25vh;
+    margin: 0;
+  }
+
+}
+
