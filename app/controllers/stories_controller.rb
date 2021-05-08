@@ -11,8 +11,11 @@ class StoriesController < ApplicationController
 
   def create
     @story = Story.new(form_params)
-    @story.save
-    redirect_to root_path
+    if @story.save
+      redirect_to root_path
+    else
+      render 'new'
+    end
   end
 
   def show
@@ -31,8 +34,11 @@ class StoriesController < ApplicationController
 
   def update
     @story = Story.find(params[:id])
-    @story.update(form_params)
-    redirect_to story_path(@story)
+    if @story.update(form_params)
+      redirect_to story_path(@story)
+    else
+      render 'edit'
+    end
   end
 
   def form_params
