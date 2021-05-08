@@ -2,7 +2,12 @@ class StoriesController < ApplicationController
 
   # Stories list page (also homepage)
   def index
-    @stories = Story.all
+    @topic = params[:topic]
+    @stories = if @topic.present?
+                 Story.where(topic: @topic)
+               else
+                 Story.all
+               end
   end
 
   def new
