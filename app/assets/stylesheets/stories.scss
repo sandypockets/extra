@@ -4,19 +4,15 @@
 
 $primaryYellow: #FFC017;
 
+// Story SHOW
 .story-show-container {
   display: flex;
   justify-content: center;
+  margin-top: 3rem;
 
   .story-container {
     display: flex;
     flex-direction: column;
-
-    .story-content {
-      h1 {
-        margin-top: 1.5em;
-      }
-    }
 
     .story-actions {
       display: flex;
@@ -26,3 +22,14 @@ $primaryYellow: #FFC017;
   }
 }
 
+// Story NEW
+.new-story-container {
+  display: flex;
+  justify-content: center;
+
+  .new-story-page-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+  }
+}
