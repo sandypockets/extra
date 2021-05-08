@@ -21,7 +21,7 @@ Extra was bootstrapped with the [rails generator](https://guides.rubyonrails.org
 
 ## Database
 
-
+After creating a new model, (or migration) be sure to confirm the migration is correct, then run `rails db:migrate` to update the database tables. Learn more about [Active Record migrations](https://guides.rubyonrails.org/active_record_migrations.html).
 
 
 ### Design Resources
