@@ -1,5 +1,13 @@
 <h1 class="section-heading">Stories</h1>
 
+<!-- Topic filtering-->
+<nav class="topics">
+  <%= link_to 'All stories', root_path %>
+  <%= link_to 'Test', root_path(topic: 'Test') %>
+  <%= link_to 'Testing', root_path(topic: 'Testing') %>
+  <%= link_to 'Topic Testing', root_path(topic: 'Topic Testing') %>
+</nav>
+
 <div class="stories-index-container">
   <div class="stories-index-content">
 
