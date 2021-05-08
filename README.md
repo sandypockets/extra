@@ -1,6 +1,8 @@
 # Extra
 Extra is a blogging platform for sharing ideas, stories, and more. Extra was built with Ruby on Rails, and styled with Sass.
 
+Extra was bootstrapped with the [rails generator](https://guides.rubyonrails.org/getting_started.html#creating-the-blog-application).
+
 ## Features
 
 * 
@@ -21,13 +23,6 @@ Extra is a blogging platform for sharing ideas, stories, and more. Extra was bui
 
 
 
-## Creating Extra
-Extra was bootstrapped with the [rails generator](https://guides.rubyonrails.org/getting_started.html#creating-the-blog-application).
-
-> Extra uses 3 models: Stories, Users, and Topics.
-
-1. Run `rails generate controller Stories`
-2. Run `rails generate model Story title:string body:text topic:string`
 
 ### Design Resources
 * Figma - Link to project on Figma
