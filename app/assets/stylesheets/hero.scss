@@ -1,7 +1,6 @@
 $primaryYellow: #FFC017;
 
 .hero-container {
-
   .hero-line {
     background-color: black;
     height: 1px;
@@ -9,9 +8,32 @@ $primaryYellow: #FFC017;
 
   .hero-background {
     background-color: $primaryYellow;
-    height: 25vh;
+    height: 30vh;
     margin: 0;
-  }
 
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+
+      h2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-top: 0;
+        margin-left: 3rem;
+        padding-top: 1.5em;
+      }
+
+      p {
+        width: 45%;
+      }
+    }
+  }
 }
 
+.hero-p {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-left: 3rem;
+}
