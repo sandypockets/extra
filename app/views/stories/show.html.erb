@@ -1,9 +1,15 @@
-<div>
-  <h1><%= @story.title %></h1>
-  <p><%= simple_format @story.body %></p>
-</div>
+<div class="story-show-container">
 
-<div>
-  <%= link_to 'Delete this story', story_path(@story), method: :delete, data: { confirm: 'Deleting is forever. Are you sure?' } %>
-  <%= link_to 'Edit this story', edit_story_path(@story) %>
+  <div class="story-container">
+    <div class="story-content">
+      <h1><%= @story.title %></h1>
+      <p><%= simple_format @story.body %></p>
+    </div>
+
+    <div class="story-actions">
+      <%= link_to 'Delete this story', story_path(@story), method: :delete, data: { confirm: 'Deleting is forever. Are you sure?' } %>
+      <%= link_to 'Edit this story', edit_story_path(@story) %>
+    </div>
+  </div>
+
 </div>
