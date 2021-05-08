@@ -1,0 +1,17 @@
+<%= form_for @story do |f| %>
+
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :topic %>
+    <%= f.text_field :topic %>
+  </p>
+  <p>
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </p>
+
+  <%= f.submit 'Publish Story' %>
+<% end %>
