@@ -5,7 +5,7 @@ Extra was bootstrapped with the [rails generator](https://guides.rubyonrails.org
 
 ## Features
 
-* 
+* Users can write, edit and delete (their own) stories
 
 ## Getting Started
 
