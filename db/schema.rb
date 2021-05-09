@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_09_215218) do
+ActiveRecord::Schema.define(version: 2021_05_09_224707) do
 
   create_table "comments", force: :cascade do |t|
     t.text "body"
@@ -19,6 +19,15 @@ ActiveRecord::Schema.define(version: 2021_05_09_215218) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"
     t.index ["story_id"], name: "index_comments_on_story_id"
+  end
+
+  create_table "favourites", force: :cascade do |t|
+    t.integer "story_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["story_id"], name: "index_favourites_on_story_id"
+    t.index ["user_id"], name: "index_favourites_on_user_id"
   end
 
   create_table "stories", force: :cascade do |t|
@@ -41,4 +50,6 @@ ActiveRecord::Schema.define(version: 2021_05_09_215218) do
   end
 
   add_foreign_key "comments", "stories"
+  add_foreign_key "favourites", "stories"
+  add_foreign_key "favourites", "users"
 end
