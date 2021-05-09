@@ -3,9 +3,9 @@
 <!-- Topic filtering-->
 <nav class="topics">
   <%= link_to 'All stories', root_path %>
-  <%= link_to 'Tutorials', root_path(topic: 'Tutorials') %>
-  <%= link_to 'Deep Dives', root_path(topic: 'Deep Dives') %>
-  <%= link_to 'Ideas', root_path(topic: 'Ideas') %>
+  <%= active_link_to 'Tutorials', root_path(topic: 'Tutorials'), active: { topic: 'Tutorials' } %>
+  <%= active_link_to 'Deep Dives', root_path(topic: 'Deep Dives'), active: { topic: 'Deep Dives' } %>
+  <%= active_link_to 'Ideas', root_path(topic: 'Ideas'), active: { topic: 'Ideas' } %>
 </nav>
 
 <div class="stories-index-container">
