@@ -16,10 +16,12 @@
       </div>
     </div>
 
-    <div class="story-actions">
-      <%= link_to 'Delete this story', story_path(@story), method: :delete, data: { confirm: 'Deleting is forever. Are you sure?' } %>
-      <%= link_to 'Edit this story', edit_story_path(@story) %>
-    </div>
+    <% if @story.user == @current_user %>
+      <div class="story-actions">
+        <%= link_to 'Delete this story', story_path(@story), method: :delete, data: { confirm: 'Deleting is forever. Are you sure?' } %>
+        <%= link_to 'Edit this story', edit_story_path(@story) %>
+      </div>
+    <% end %>
 
     <h3>Comments</h3>
     <% @story.comments.order('created_at desc').each do |comment| %>
