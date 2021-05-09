@@ -1,7 +1,6 @@
 <% content_for :page_title, @story.title %>
 
 <div class="story-show-container">
-
   <div class="story-container">
 
     <div class="story-content-container">
@@ -18,6 +17,15 @@
       <%= link_to 'Delete this story', story_path(@story), method: :delete, data: { confirm: 'Deleting is forever. Are you sure?' } %>
       <%= link_to 'Edit this story', edit_story_path(@story) %>
     </div>
+
+    <div class="comments-form">
+      <h3>Add a comment</h3>
+      <%= simple_form_for [@story, Comment.new] do |f| %>
+      <%= f.input :body %>
+      <%= f.button :submit %>
+      <% end %>
+    </div>
+
   </div>
 
 </div>
