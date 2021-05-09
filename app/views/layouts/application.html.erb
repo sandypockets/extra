@@ -12,8 +12,14 @@
 
   <body class="app-body">
 
+  <% if session[:user_id].present? %>
+    <%= render 'layouts/logged_in_header' %>
+  <% else %>
     <%= render 'layouts/logged_out_header' %>
     <%= render 'layouts/hero' %>
+  <% end %>
+
+
 
 
 
