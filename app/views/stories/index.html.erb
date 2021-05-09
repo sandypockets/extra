@@ -3,9 +3,9 @@
 <!-- Topic filtering-->
 <nav class="topics">
   <%= link_to 'All stories', root_path %>
-  <%= link_to 'Test', root_path(topic: 'Test') %>
-  <%= link_to 'Testing', root_path(topic: 'Testing') %>
-  <%= link_to 'Topic Testing', root_path(topic: 'Topic Testing') %>
+  <%= link_to 'Tutorials', root_path(topic: 'Tutorials') %>
+  <%= link_to 'Deep Dives', root_path(topic: 'Deep Dives') %>
+  <%= link_to 'Ideas', root_path(topic: 'Ideas') %>
 </nav>
 
 <div class="stories-index-container">
@@ -15,8 +15,8 @@
       <% @stories.each do |story| %>
 
         <div class="story-card">
-        <h3><%= link_to story.title, story_path(story) %></h3>
-        <p><%= story.body %></p>
+          <h3><%= link_to story.title, story_path(story) %></h3>
+          <p><%= story.body %></p>
         </div>
 
       <% end %>
