@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   # routes for users
   resources :users
   # Routes for sessions
-  resources :sessions
+  resource :session
 
   # Set homepage as stories index page
   root 'stories#index'
