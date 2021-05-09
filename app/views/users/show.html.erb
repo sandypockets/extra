@@ -1,1 +1,7 @@
 <%= @user.username %>
+
+<% @user.stories.each do |story| %>
+  <%= story.title %>
+  <%= story.topic %>
+  <%= simple_format story.body %>
+<% end %>
