@@ -2,6 +2,7 @@ class StoriesController < ApplicationController
 
   # Stories list page (also homepage)
   def index
+    # Topic filtering
     @topic = params[:topic]
     @stories = if @topic.present?
                  Story.where(topic: @topic)
