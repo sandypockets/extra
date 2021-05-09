@@ -6,6 +6,9 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+  # routes for users
+  resources :users
+
   # Set homepage as stories index page
   root 'stories#index'
 
