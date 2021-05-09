@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # Routes for stories
   resources :stories do
     resources :comments
+    resource :favourite
   end
 
   # routes for users
