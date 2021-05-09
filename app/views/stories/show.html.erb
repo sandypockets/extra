@@ -23,7 +23,7 @@
       <%= simple_format comment.body %>
       <p>Posted by
         <% if comment.user.present? %>
-          <%= comment.user.username.capitalize %> |
+          <%= link_to comment.user.username.capitalize, user_path(comment.user) %> |
         <% else %>
           Anonymous
         <% end %>
