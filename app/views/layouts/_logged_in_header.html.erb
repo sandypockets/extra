@@ -1,0 +1,17 @@
+<header>
+  <div class="logout-header-container">
+
+    <div class="logo-tagline-container">
+      <h1><%= link_to 'Extra', root_path, class: 'logo' %></h1>
+      <h2 class="tagline">What will you write about?</h2>
+    </div>
+
+    <nav>
+      <%= session[:user_id] %>
+      <%= link_to 'Read', root_path %>
+      <%= link_to 'Write', new_story_path %>
+      <%= link_to 'Logout', session_path, method: :delete %>
+    </nav>
+
+  </div>
+</header>
