@@ -34,6 +34,7 @@
     <orderEntry type="library" scope="PROVIDED" name="actionpack (v6.1.3.2, RVM: ruby-2.6.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actiontext (v6.1.3.2, RVM: ruby-2.6.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actionview (v6.1.3.2, RVM: ruby-2.6.3) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="active_link_to (v1.0.5, RVM: ruby-2.6.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activejob (v6.1.3.2, RVM: ruby-2.6.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activemodel (v6.1.3.2, RVM: ruby-2.6.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activerecord (v6.1.3.2, RVM: ruby-2.6.3) [gem]" level="application" />
@@ -85,7 +86,6 @@
     <orderEntry type="library" scope="PROVIDED" name="sassc-rails (v2.1.2, RVM: ruby-2.6.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="selenium-webdriver (v3.142.7, RVM: ruby-2.6.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="semantic_range (v3.0.0, RVM: ruby-2.6.3) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="simple_form (v5.1.0, RVM: ruby-2.6.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="spring (v2.1.1, RVM: ruby-2.6.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets (v4.0.2, RVM: ruby-2.6.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets-rails (v3.2.2, RVM: ruby-2.6.3) [gem]" level="application" />
@@ -129,7 +129,6 @@
         <option value="resource" />
         <option value="scaffold" />
         <option value="scaffold_controller" />
-        <option value="simple_form:install" />
         <option value="system_test" />
         <option value="task" />
         <option value="test_unit:channel" />
@@ -160,7 +159,6 @@
         <option value="resource" />
         <option value="scaffold" />
         <option value="scaffold_controller" />
-        <option value="simple_form:install" />
         <option value="system_test" />
         <option value="task" />
         <option value="test_unit:channel" />
