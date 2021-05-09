@@ -15,6 +15,7 @@
   </p>
   <%= f.label :topic %>
   <%= f.select :topic, Story.all.collect { |story| [story.topic] } %>
+  <%#= f.text_field :topic %>
   <p>
     <%= f.label :body %>
     <%= f.text_area :body %>
