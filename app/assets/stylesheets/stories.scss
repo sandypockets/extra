@@ -55,6 +55,63 @@ $primaryYellow: #FFC017;
     display: flex;
     flex-direction: column;
     margin-top: 3rem;
+    width: 50vw;
+
+    h1 {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1.5em;
+    }
+
+    .story-form {
+      width: fit-content;
+    }
+
+    .new-story-col-2 {
+      display: flex;
+      justify-content: space-evenly;
+      height: 3vh;
+
+      .new-story-dropdown-field {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 1.6em;
+      }
+    }
+
+    select#story_topic {
+      border: none;
+    }
+
+    select#story_topic:hover {
+      // Add hover fx
+    }
+
+    input#story_title {
+      width: 40vw;
+      margin-right: 0.4em;
+      border: none;
+      font-size: larger;
+    }
+
+    input#story_title:hover {
+      // box-shadow: 5px 5px #6e6e6e;
+    }
+    input#story_title:focus {
+      outline: none;
+    }
+
+    textarea#story_body {
+      height: 50vh;
+      width: 98%;
+      border: none;
+      padding-top: 2em;
+    }
+
+    textarea:focus {
+      outline: none;
+    }
   }
 }
 
