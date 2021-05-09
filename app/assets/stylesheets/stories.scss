@@ -85,6 +85,7 @@ $primaryFont: 'Libre Baskerville', serif;
       border: none;
       font-size: medium;
       color: #707070;
+      font-family: monospace;
     }
 
     select#story_topic:hover {
@@ -99,7 +100,7 @@ $primaryFont: 'Libre Baskerville', serif;
       width: 40vw;
       margin-right: 0.4em;
       border: none;
-      font-size: larger;
+      font-size: 1.8em;
       font-family: monospace;
     }
 
@@ -112,13 +113,14 @@ $primaryFont: 'Libre Baskerville', serif;
     }
 
     textarea#story_body {
-      height: 25vh;
+      height: 35vh;
       width: 98%;
       border: none;
-      padding-top: 2em;
-      font-family: $primaryFont;
+      padding-top: 5em;
+      font-family: monospace;
       font-weight: normal;
       font-size: 1.1em;
+      caret-color: black;
     }
 
     textarea#story_body::placeholder {
