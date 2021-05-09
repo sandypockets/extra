@@ -4,6 +4,14 @@
 $primaryYellow: #FFC017;
 $primaryFont: monospace;
 
+.topics {
+  a {
+    &.active {
+      color: $primaryYellow;
+    }
+  }
+}
+
 // Story SHOW
 .story-show-container {
   display: flex;
