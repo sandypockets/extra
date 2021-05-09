@@ -19,6 +19,7 @@ class StoriesController < ApplicationController
 
   def create
     @story = Story.new(form_params)
+    @story.user = @current_user
     if @story.save
       redirect_to root_path
     else
