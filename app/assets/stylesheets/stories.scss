@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 $primaryYellow: #FFC017;
+$primaryFont: 'Libre Baskerville', serif;
 
 // Story SHOW
 .story-show-container {
@@ -82,10 +83,16 @@ $primaryYellow: #FFC017;
 
     select#story_topic {
       border: none;
+      font-size: medium;
+      color: #707070;
     }
 
     select#story_topic:hover {
       // Add hover fx
+    }
+
+    select#story_topic:focus {
+      outline: none;
     }
 
     input#story_title {
@@ -93,20 +100,32 @@ $primaryYellow: #FFC017;
       margin-right: 0.4em;
       border: none;
       font-size: larger;
+      font-family: monospace;
     }
 
     input#story_title:hover {
       // box-shadow: 5px 5px #6e6e6e;
     }
+
     input#story_title:focus {
       outline: none;
     }
 
     textarea#story_body {
-      height: 50vh;
+      height: 25vh;
       width: 98%;
       border: none;
       padding-top: 2em;
+      font-family: $primaryFont;
+      font-weight: normal;
+      font-size: 1.1em;
+    }
+
+    textarea#story_body::placeholder {
+      font-size: 1.5em;
+      text-align: center;
+      font-family: monospace;
+      font-weight: bold;
     }
 
     textarea:focus {
