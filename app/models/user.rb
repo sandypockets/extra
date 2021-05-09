@@ -2,6 +2,7 @@ class User < ApplicationRecord
 
   has_many :stories
   has_many :comments
+  has_many :favourites
 
   has_secure_password
 

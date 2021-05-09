@@ -2,6 +2,8 @@ class Story < ApplicationRecord
 
   # A story can have many comments
   has_many :comments
+  # A story can have many favourites
+  has_many :favourites
   # A story can only belong to one user
   belongs_to :user
 
