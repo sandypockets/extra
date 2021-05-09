@@ -3,13 +3,13 @@
 
     <div class="logo-tagline-container">
       <h1><%= link_to 'Extra', root_path, class: 'logo' %></h1>
-      <h2 class="tagline">What will you write about?</h2>
+      <h2 class="tagline">Hi, <%= @current_user.first_name.capitalize %></h2>
     </div>
 
-    <nav>
-      <%= session[:user_id] %>
+    <nav class="logged-in-nav-links nav-links">
       <%= link_to 'Read', root_path %>
       <%= link_to 'Write', new_story_path %>
+      <%= link_to 'Profile', edit_user_path(@current_user) %>
       <%= link_to 'Logout', session_path, method: :delete %>
     </nav>
 
