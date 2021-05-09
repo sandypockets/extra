@@ -1,5 +1,7 @@
 class StoriesController < ApplicationController
 
+  before_action :logged_in, except: [:index, :show]
+
   # Stories list page (also homepage)
   def index
     # Topic filtering
