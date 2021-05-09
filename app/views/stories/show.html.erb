@@ -20,7 +20,7 @@
 
     <h3>Comments</h3>
     <% @story.comments.each do |comment| %>
-      <%= comment.body %>
+      <%= simple_format comment.body %>
     <% end %>
 
     <div class="comments-form">
