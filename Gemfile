@@ -57,3 +57,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Show clicked filter links as active
 gem 'active_link_to'
+
+gem 'simple_form'
