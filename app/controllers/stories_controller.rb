@@ -33,20 +33,25 @@ class StoriesController < ApplicationController
 
   def destroy
     @story = Story.find(params[:id])
-    @story.destroy
+    @story.destroy if @story.user == @current_user
     redirect_to root_path
   end
 
   def edit
     @story = Story.find(params[:id])
+    redirect_to root_path if @story.user != @current_user
   end
 
   def update
     @story = Story.find(params[:id])
-    if @story.update(form_params)
-      redirect_to story_path(@story)
+    if @story.user == @current_user
+      if @story.update(form_params)
+        redirect_to story_path(@story)
+      else
+        render 'edit'
+      end
     else
-      render 'edit'
+      redirect_to root_path
     end
   end
 
