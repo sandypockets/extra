@@ -8,11 +8,11 @@
   justify-content: center;
 }
 
-.new-user-form-container {
+.user-form-container {
   display: flex;
   flex-direction: column;
 
-  .new-user-form {
+  .user-form {
     display: flex;
     justify-content: center;
 
@@ -38,7 +38,7 @@
     }
   }
 
-  .new-user-submit {
+  .form-submit {
     display: flex;
     justify-content: center;
   }
