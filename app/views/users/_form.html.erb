@@ -1,11 +1,11 @@
-<div class="new-user-form-container">
+<div class="user-form-container">
   <%= form_for @user do |f| %>
     <% if @user.errors.any? %>
         <% @user.errors.full_messages.each do |err| %>
           <p><%= err %></p>
         <% end %>
     <% end %>
-    <div class="new-user-form">
+    <div class="user-form">
       <p>
         <%= f.text_field :first_name, placeholder: 'First name' %>
         <%= f.text_field :last_name, placeholder: 'Last name' %>
@@ -15,7 +15,7 @@
         <%= f.password_field :password_confirmation, placeholder: 'Confirm password' %>
       </p>
     </div>
-    <div class="new-user-submit">
+    <div class="form-submit">
     <%= f.submit 'Sign up' %>
     </div>
   <% end %>
