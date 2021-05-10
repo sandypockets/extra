@@ -1,14 +1,14 @@
 <h1 class="section-heading">Welcome back.</h1>
 
-<div class="new-user-form-container">
+<div class="user-form-container">
   <%= form_for :session, url: session_path do |f| %>
-    <div class="new-user-form">
+    <div class="user-form">
       <p>
         <%= f.email_field :email, placeholder: 'Email' %>
         <%= f.password_field :password, placeholder: 'Password' %>
       </p>
     </div>
-    <div class="new-user-submit">
+    <div class="form-submit">
       <%= f.submit 'Sign in' %>
     </div>
   <% end %>
