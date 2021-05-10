@@ -1,4 +1,8 @@
-# 📰 Extra
+<h1 align="center">
+⚠️ Work in progress ⚠️
+</h1>
+
+<h1 align="center">📰 Extra</h1>
 Extra is a blogging platform for sharing ideas, stories, and more. Extra was built with Ruby on Rails, styled with Sass.
 
 ----
