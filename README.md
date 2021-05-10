@@ -1,11 +1,12 @@
 # Extra
-Extra is a blogging platform for sharing ideas, stories, and more. Extra was built with Ruby on Rails, and styled with Sass.
-
-Extra was bootstrapped with the [rails generator](https://guides.rubyonrails.org/getting_started.html#creating-the-blog-application).
+Extra is a blogging platform for sharing ideas, stories, and more. Extra was built with Ruby on Rails, styled with Sass, and inspired by Medium.
 
 ## Features
 
-* Users can write, edit and delete (their own) stories
+* User sign up and authentication
+* Visitors (not logged in) can read stories
+* Users (logged in) can write, edit and delete (their own) stories
+* Users can favourite stories
 * Users can filter stories by topic
 
 ## Getting Started
@@ -19,13 +20,15 @@ Extra was bootstrapped with the [rails generator](https://guides.rubyonrails.org
 * Ruby `2.6.3`
 * Rails `6.1.3.2`
 * Node `10.17.0`
+* SQLite
 
 ## Database
 
-After creating a new model, (or migration) be sure to confirm the migration is correct, then run `rails db:migrate` to update the database tables. Learn more about [Active Record migrations](https://guides.rubyonrails.org/active_record_migrations.html).
+Extra currently uses an [SQLite](https://www.sqlite.org/docs.html) database. While this is sufficient for development of the core features, eventually the app will be migrated to [Postgres](https://www.postgresql.org/docs/) so it can be deployed.
 
+An ERD of the database can be found in the project's `docs/` directory.
 
-### Design Resources
+### Wireframe
 * Figma - Link to project on Figma
 
 ---
