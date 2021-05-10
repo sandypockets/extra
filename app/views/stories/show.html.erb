@@ -5,6 +5,7 @@
 
     <div class="story-content-container">
       <div class="story-content">
+
         <h1><%= @story.title %></h1>
         <% if @story.user.present? %>
           <h3><%= @story.user.username %></h3>
@@ -12,6 +13,18 @@
         <% if @story.topic != 'Select a topic' %>
           <h3><%= @story.topic %></h3>
         <% end %>
+
+        <% if has_session? %>
+
+          <% if @story.favourites.where(user: @current_user).any? %>
+            <%= link_to "Remove favourite", story_favourite_path(@story), method: :delete %>
+          <% else %>
+            <%= link_to "Favourite", story_favourite_path(@story), method: :post %>
+          <% end %>
+
+        <% end %>
+
+
         <p><%= simple_format @story.body %></p>
       </div>
     </div>
