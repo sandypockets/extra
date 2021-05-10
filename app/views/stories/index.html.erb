@@ -1,12 +1,21 @@
 <h1 class="section-heading">Stories</h1>
 
 <!-- Topic filtering-->
-<nav class="topics">
-  <%= active_link_to 'All stories', root_path, active: { topic: nil } %>
-  <%= active_link_to 'Tutorials', root_path(topic: 'Tutorials'), active: { topic: 'Tutorials' } %>
-  <%= active_link_to 'Deep Dives', root_path(topic: 'Deep Dives'), active: { topic: 'Deep Dives' } %>
-  <%= active_link_to 'Ideas', root_path(topic: 'Ideas'), active: { topic: 'Ideas' } %>
-</nav>
+<div class="topics-container">
+  <nav class="topics">
+    <div class="btn topic-btn"><%= active_link_to 'All stories', root_path, active: { topic: nil } %></div>
+    <div class="btn topic-btn"><%= active_link_to 'Tutorials', root_path(topic: 'Tutorials'), active: { topic: 'Tutorials' } %></div>
+    <div class="btn topic-btn"><%= active_link_to 'Deep Dives', root_path(topic: 'Deep Dives'), active: { topic: 'Deep Dives' } %></div>
+    <div class="btn topic-btn"><%= active_link_to 'Ideas', root_path(topic: 'Ideas'), active: { topic: 'Ideas' } %></div>
+    <div class="btn topic-btn"><%= active_link_to 'World', root_path(topic: 'World'), active: { topic: 'World' } %></div>
+    <div class="btn topic-btn"><%= active_link_to 'Productivity', root_path(topic: 'Productivity'), active: { topic: 'Productivity' } %></div>
+    <div class="btn topic-btn"><%= active_link_to 'Programming', root_path(topic: 'Programming'), active: { topic: 'Programming' } %></div>
+    <div class="btn topic-btn"><%= active_link_to 'Politics', root_path(topic: 'Politics'), active: { topic: 'Politics' } %></div>
+    <div class="btn topic-btn"><%= active_link_to 'Data Science', root_path(topic: 'Data Science'), active: { topic: 'Data Science' } %></div>
+    <div class="btn topic-btn"><%= active_link_to 'Startups', root_path(topic: 'Startups'), active: { topic: 'Startups' } %></div>
+    <div class="btn topic-btn"><%= active_link_to 'Gaming', root_path(topic: 'Gaming'), active: { topic: 'Gaming' } %></div>
+  </nav>
+</div>
 
 <div class="stories-index-container">
   <div class="stories-index-content">
