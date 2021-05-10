@@ -1,7 +1,8 @@
 # Extra
-Extra is a blogging platform for sharing ideas, stories, and more. Extra was built with Ruby on Rails, styled with Sass, and inspired by Medium.
+Extra is a blogging platform for sharing ideas, stories, and more. Extra was built with Ruby on Rails, styled with Sass.
 
-## Features
+----
+## ✨ Features
 
 * User sign up and authentication
 * Visitors (not logged in) can read stories
@@ -9,11 +10,23 @@ Extra is a blogging platform for sharing ideas, stories, and more. Extra was bui
 * Users can favourite stories
 * Users can filter stories by topic
 
-## Getting Started
+## 🛠 Getting Started
 
-1. [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo), then [clone](https://github.com/git-guides/git-clone) the project by running `git@github.com:sandypockets/extra.git` in your terminal
-2. From the project root, install dependencies by running `bundle install`
-3. From the root, run `rails server`. Navigate to [`localhost:3000`](http:localhost:3000)
+1. [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo), then [clone](https://github.com/git-guides/git-clone) the project.
+   ```
+    git clone git@github.com:sandypockets/extra.git
+   ```
+2. From the project root, install dependencies. 
+   ```
+   bundle install
+   ```
+   
+3. From the root, start the server.
+    ```
+    rails server
+   ```
+
+4. Navigate to [`localhost:3000`](http:localhost:3000) in your favourite web browser.
 
 ## Dependencies
 
@@ -28,32 +41,7 @@ Extra currently uses an [SQLite](https://www.sqlite.org/docs.html) database. Whi
 
 An ERD of the database can be found in the project's `docs/` directory.
 
-### Wireframe
+## Wireframe
 * Figma - Link to project on Figma
 
----
-
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Screenshots
