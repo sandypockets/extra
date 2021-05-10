@@ -69,25 +69,36 @@ header {
       display: flex;
       flex-direction: column;
 
-      h2 {
+      h1 {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
         margin-top: 0;
         margin-left: 3rem;
-        padding-top: 1.5em;
+        padding-top: 2rem;
+        margin-bottom: 0;
+        padding-bottom: 0;
       }
 
-      p {
-        width: 45%;
+      .hero-p {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 0 0 0 3rem;
+        margin: 0;
+        width: 45vw;
+      }
+
+      .hero-btn {
+        margin: 1rem 0 0 8rem;
       }
     }
   }
 }
 
-.hero-p {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  padding-left: 3rem;
+.btn {
+  padding: 4px 6px 4px 6px;
+  border: black solid 2px;
+  border-radius: 25px;
+  width: fit-content;
 }
