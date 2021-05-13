@@ -59,3 +59,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'active_link_to'
 
 gem 'simple_form'
+
+# Image uploader
+gem 'carrierwave', '~> 2.0'
