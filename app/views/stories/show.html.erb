@@ -5,12 +5,13 @@
     <%#= image %>
     <%# end %>
 <%# end %>
-
-<div class="story-header-img-wrapper">
-<%= link_to @story.image.url do %>
-  <%= image_tag @story.image.url, class: 'story-header-img'%>
+<% if @story.image.url.present? %>
+  <div class="story-header-img-wrapper">
+  <%= link_to @story.image.url do %>
+    <%= image_tag @story.image.url, class: 'story-header-img'%>
+  <% end %>
+  </div>
 <% end %>
-</div>
 
 <div class="story-show-container">
   <div class="story-container">
