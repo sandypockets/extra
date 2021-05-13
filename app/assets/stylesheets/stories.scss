@@ -38,15 +38,19 @@ div.topics-container {
       }
     }
   }
-
-
-
 }
 
 
 // Story SHOW
 .story-header-img {
   width: 100%;
+}
+
+img.story-header-img {
+}
+
+.story-header-img-wrapper {
+  height: 100%;
 }
 
 .story-show-container {
