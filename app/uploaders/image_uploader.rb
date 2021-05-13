@@ -9,7 +9,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Size to fit the max width and height
   # process resize_to_fit: [1000, 800]
-  process resize_to_fit: [800, 800]
+  process resize_to_fit: [1000, 800]
 
 
   version :thumb do
