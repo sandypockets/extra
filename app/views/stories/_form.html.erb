@@ -21,6 +21,7 @@
       <%#= f.text_field :topic %>
     <p class="new-story-body-field">
       <%= f.text_area :body, placeholder: 'Start writing your next story.' %>
+      <%= f.file_field :image %>
     </p>
 
     <%= f.submit 'Publish Story' %>
