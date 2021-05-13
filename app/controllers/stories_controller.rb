@@ -39,6 +39,7 @@ class StoriesController < ApplicationController
 
   def edit
     @story = Story.find(params[:id])
+    redirect_to root_path if @story.created_at < 2.hours.ago
     redirect_to root_path if @story.user != @current_user
   end
 
