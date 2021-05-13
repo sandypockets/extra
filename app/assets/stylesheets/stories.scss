@@ -185,6 +185,19 @@ div.topics-container {
   margin-top: 3rem;
 }
 
+.section-heading-container {
+  display: flex;
+  justify-content: center;
+}
+
+h1.section-heading {
+  background: linear-gradient(180deg, white 65%, $primaryYellow 65%);
+}
+
+.highlight {
+  background: linear-gradient(180deg, white 65%, $primaryYellow 65%);
+}
+
 .stories-index-container {
   display: flex;
   flex-direction: row;
