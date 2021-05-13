@@ -1,9 +1,13 @@
 <div class="user-form-container">
   <%= form_for @user do |f| %>
     <% if @user.errors.any? %>
-        <% @user.errors.full_messages.each do |err| %>
-          <p><%= err %></p>
-        <% end %>
+        <div class="error-container">
+          <div class="error-wrapper">
+            <% @user.errors.full_messages.each do |err| %>
+              <p class="error-line"><%= err %></p>
+            <% end %>
+          </div>
+        </div>
     <% end %>
     <div class="user-form">
       <p>

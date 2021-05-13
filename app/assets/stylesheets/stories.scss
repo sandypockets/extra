@@ -183,6 +183,13 @@ div.topics-container {
   display: flex;
   justify-content: center;
   margin-top: 3rem;
+
+  .right-word {
+    margin: 0 0 0 11px;
+  }
+  .left-word {
+    margin: 0 11px 0 0;
+  }
 }
 
 .section-heading-container {
@@ -191,7 +198,7 @@ div.topics-container {
 }
 
 h1.section-heading {
-  background: linear-gradient(180deg, white 65%, $primaryYellow 65%);
+  //background: linear-gradient(180deg, white 65%, $primaryYellow 65%);
 }
 
 .highlight {
