@@ -1,6 +1,14 @@
 <% content_for :page_title, @story.title %>
 
-<%= image_tag @story.image %>
+<%# if @story.image %>
+  <%#= image_tag @story.image do |image| %>
+    <%#= image %>
+    <%# end %>
+<%# end %>
+
+<%= link_to @story.image.url do %>
+  <%= image_tag @story.image.url, class: 'story-header-img'%>
+<% end %>
 
 <div class="story-show-container">
   <div class="story-container">
