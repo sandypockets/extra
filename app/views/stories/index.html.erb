@@ -26,6 +26,15 @@
       <% @stories.each do |story| %>
 
         <div class="story-card">
+
+          <% if story.image.url.present? %>
+            <div class="story-card-thumb-img">
+              <%= link_to story.image.url do %>
+                <%= image_tag story.image.thumb.url, class: 'story-header-img'%>
+              <% end %>
+            </div>
+          <% end %>
+
           <h3><%= link_to story.title, story_path(story) %></h3>
           <p><%= story.body %></p>
         </div>
