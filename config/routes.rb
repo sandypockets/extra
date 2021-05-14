@@ -16,4 +16,9 @@ Rails.application.routes.draw do
   # Set homepage as stories index page
   root 'stories#index'
 
+  # Add new pages and their urls
+  get 'about', to: 'pages#about'
+  get 'our-story', to: 'pages#our_story'
+  get 'terms-and-conditions', to: 'pages#terms'
+
 end
