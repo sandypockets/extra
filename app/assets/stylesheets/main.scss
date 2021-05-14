@@ -82,7 +82,7 @@ header {
 
   .hero-background {
     background-color: $primaryYellow;
-    height: 30vh;
+    height: 25vh;
     margin: 0;
 
     .hero-content {
@@ -121,4 +121,53 @@ header {
   border: black solid 2px;
   border-radius: 25px;
   width: fit-content;
+}
+
+@media (max-width: 400px) {
+  div.logo-tagline-container {
+    display: flex;
+    flex-direction: column;
+
+    .tagline {
+      display: none;
+    }
+  }
+
+  .hero-container {
+    height: 19vh;
+    .hero-background {
+      height: 19vh;
+    }
+  }
+
+  .hero-background {
+
+    h1 {
+      display: flex;
+      justify-content: center;
+    }
+
+    p {
+      display: none;
+    }
+  }
+
+  .section-heading {
+    margin-bottom: 1.5em;
+  }
+
+  nav.topics {
+    width: 90vw;
+  }
+
+  div.story-card#story-card {
+    min-width: 20rem;
+  }
+
+  h1.section-heading {
+
+  }
+
+
+
 }
