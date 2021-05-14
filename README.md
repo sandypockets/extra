@@ -14,6 +14,12 @@ Extra is a blogging platform for sharing ideas, stories, and more. Extra was bui
 * Users can favourite stories
 * Users can filter stories by topic
 
+### Admin Features
+
+* Admin dashboard
+* Admins can edit stories, users, and comments
+* Admins can create new Admin users
+
 ## 🛠 Getting Started
 
 1. [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo), then [clone](https://github.com/git-guides/git-clone) the project.
@@ -41,6 +47,12 @@ Extra is a blogging platform for sharing ideas, stories, and more. Extra was bui
 * [bcrypt](https://github.com/bcrypt-ruby/bcrypt-ruby) `3.1.7`
 * [active_link_to](https://github.com/comfy/active_link_to)
 * [simple_form](https://github.com/heartcombo/simple_form)
+* [carrierwave]() `2.0`
+* [activeadmin]()
+* [devise]()
+* [cancancan]()
+* [draper]()
+* [pundit]()
 
 ## 🗂 Database
 
