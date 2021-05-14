@@ -62,3 +62,11 @@ gem 'simple_form'
 
 # Image uploader
 gem 'carrierwave', '~> 2.0'
+
+# Active Admin
+gem 'activeadmin'
+# Plus integrations with:
+gem 'devise'
+gem 'cancancan'
+gem 'draper'
+gem 'pundit'
