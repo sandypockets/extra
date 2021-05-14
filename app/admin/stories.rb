@@ -5,7 +5,7 @@ ActiveAdmin.register Story do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  # permit_params :title, :body, :topic, :user_id, :image
+  permit_params :title, :body, :topic, :user_id, :image
   #
   # or
   #
