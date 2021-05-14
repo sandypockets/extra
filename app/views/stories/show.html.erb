@@ -1,10 +1,5 @@
 <% content_for :page_title, @story.title %>
 
-<%# if @story.image %>
-  <%#= image_tag @story.image do |image| %>
-    <%#= image %>
-    <%# end %>
-<%# end %>
 <% if @story.image.url.present? %>
   <div class="story-header-img-wrapper">
   <%= link_to @story.image.url do %>
