@@ -33,7 +33,7 @@ class StoriesController < ApplicationController
 
   def destroy
     @story = Story.find(params[:id])
-    @story.destroy if @story.user == @current_user
+    @story.destroy if @story.user == @current_user || @current_user.is_admin?
     redirect_to root_path
   end
 
