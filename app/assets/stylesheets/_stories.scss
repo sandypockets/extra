@@ -212,6 +212,7 @@ img.story-header-img {
 .section-heading-container {
   display: flex;
   justify-content: center;
+  margin-bottom: 1em;
 }
 
 h1.section-heading {
@@ -253,7 +254,7 @@ h1.section-heading {
         }
 
         p {
-          max-height: 5.5em;
+          max-height: 5em;
           overflow: hidden;
         }
       }
