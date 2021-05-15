@@ -60,13 +60,15 @@ Extra currently uses an [SQLite](https://www.sqlite.org/docs.html) database. Whi
 
 An ERD of the database can be found in the project's `docs/` directory.
 
-In some instances you may need to reset the database, or make manual changes. First, reload the database from the schema.
+In some instances you may need to reset the database, or make manual changes. 
+
+1. Reload the database from the schema.
 
 ```
 $ rake db:reset
 ```
 
-Next, drop the current tables, recreate them, run the migrations, and any seeds.
+2. Drop the current tables, recreate them, run the migrations, and any seeds.
 
 ```
 $ rake db:drop db:create db:migrate db:seed
@@ -79,23 +81,23 @@ Sometimes you might need to set a user as an admin manually. You can do that wit
 ```
 $ rails console
 ```
-Set the user you want to change as a variable
+1. Set the user you want to change as a variable
 ```
 $ @user = User.find_by(username: "kobe")
 ```
-Confirm you have the correct user by running the variable. The user's information should print to the terminal.
+2. Confirm you have the correct user by running the variable. The user's information should print to the terminal.
 ```
 $ @user
 ```
-Now you can proceed with adjusting the user's admin privileges. 
+3. Now you can proceed with adjusting the user's admin privileges. 
 ```
 $ @user.is_admin = true
 ```
-Printing `@user` again should now show the user's admin status is `true`. Next, save the changes to the database.
+4. Printing `@user` again should now show the user's admin status is `true`. Next, save the changes to the database.
 ```
 $ @user.save
 ```
-You can exit the Rails Console with `control`+`d`
+5. You can exit the Rails Console with `control`+`d`
 
 ## 🎯 Wireframe
 * [Wireframe on Figma](https://www.figma.com/file/DH4RNUH5M46X7nSDhBvarF/Extra-Wireframe-GitHub?node-id=0%3A1)
