@@ -1,6 +1,10 @@
 <%= @user.username %>
+<%= image_tag @user.avatar.avatar_thumb.url %>
+
+<h1><%= @user.username.capitalize %>'s Stories</h1>
 
 <% @user.stories.each do |story| %>
+  <%= image_tag story.image.thumb.url %>
   <%= story.title %>
   <%= story.topic %>
   <%= simple_format story.body %>
