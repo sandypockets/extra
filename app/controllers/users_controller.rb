@@ -33,7 +33,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = User.find(params[:id])
+    @user = User.find_by(username: params[:id])
     if @user.update(form_params)
       redirect_to user_path(@user)
     else
@@ -42,7 +42,7 @@ class UsersController < ApplicationController
   end
 
   def form_params
-    params.require(:user).permit(:first_name, :last_name, :username, :email, :password, :password_confirmation)
+    params.require(:user).permit(:first_name, :last_name, :username, :email, :password, :password_confirmation, :avatar)
   end
 
 end
