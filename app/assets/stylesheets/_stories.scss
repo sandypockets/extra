@@ -89,6 +89,32 @@ img.story-header-img {
       justify-content: space-evenly;
       margin-top: 2em;
     }
+
+    .story-comments-container {
+      display: flex;
+      justify-content: center;
+
+      .flex-col {
+        flex-direction: column;
+
+        h3, h4 {
+          display: flex;
+          justify-content: center;
+        }
+
+        h3 {
+          margin-top: 2em;
+        }
+
+        .comments-form {
+          label.text.required {
+            display: none;
+          }
+
+        }
+      }
+    }
+
   }
 }
 
@@ -187,9 +213,6 @@ img.story-header-img {
 }
 
 // Stories INDEX
-
-
-
 .section-heading {
   display: flex;
   justify-content: center;
