@@ -20,6 +20,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by(username: params[:id])
+    @fav_story = get_fav_stories
   end
 
   def destroy
