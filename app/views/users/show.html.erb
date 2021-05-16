@@ -1,11 +1,23 @@
-<%= @user.username %>
-<%= image_tag @user.avatar.avatar_thumb.url %>
+<div class="user-profile-container">
+  <%#= @fav_story %>
+  
+  <% @fav_story.each do |fav_story| %>
+    <% @story = Story.find_by(id: fav_story.story_id) %>
+    <h2><%= @story.title %></h2>
+  <% end %>
 
-<h1><%= @user.username.capitalize %>'s Stories</h1>
+  <div class="flex-container">
+    <div class="flex-col">
+      <%= image_tag @user.avatar.avatar_thumb.url %>
 
-<% @user.stories.each do |story| %>
-  <%= image_tag story.image.thumb.url %>
-  <%= story.title %>
-  <%= story.topic %>
-  <%= simple_format story.body %>
-<% end %>
+      <h1><%= @user.username.capitalize %>'s Stories</h1>
+    </div>
+
+    <% @user.stories.each do |story| %>
+      <%= image_tag story.image.thumb.url %>
+      <%= story.title %>
+      <%= story.topic %>
+      <%= simple_format story.body %>
+    <% end %>
+  </div>
+</div>
