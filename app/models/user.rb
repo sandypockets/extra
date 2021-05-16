@@ -6,6 +6,9 @@ class User < ApplicationRecord
 
   has_secure_password
 
+  # Add avatar uploader
+  mount_uploader :avatar, AvatarUploader
+
   validates :username, presence: true, uniqueness: true
   validates :email, presence: true, uniqueness: true
 
