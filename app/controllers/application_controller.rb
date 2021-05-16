@@ -29,4 +29,12 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def get_fav_stories
+    @user = User.find_by(username: params[:id])
+    @user.favourites.each do |_fav|
+      @story_id = @user.favourites.select(:story_id)
+      @fav_story = Story.find_by(id: @story_id)
+    end
+  end
+
 end
