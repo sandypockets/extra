@@ -3,13 +3,14 @@
 </h1>
 
 <h1 align="center">📰 Extra</h1>
-Extra is a blogging platform for sharing ideas, stories, and more. Extra was built with Ruby on Rails, styled with Sass.
+Extra is a blogging platform for sharing ideas, stories, and more. Extra was built with Ruby on Rails, and styled with Sass.
 
 ----
 ## ✨ Features
 
-* User sign up and authentication
 * Visitors (not logged in) can read stories
+* User sign up and authentication
+* Users can upload images for avatars or stories
 * Users (logged in) can write, edit and delete (their own) stories
 * Users can favourite stories
 * Users can filter stories by topic
@@ -17,8 +18,9 @@ Extra is a blogging platform for sharing ideas, stories, and more. Extra was bui
 ### Admin Features
 
 * Admin dashboard
-* Admins can edit stories, users, and comments
+* Admins can create, edit, or delete stories, users, and comments
 * Admins can create new Admin users
+* Admins can create, edit, or delete static pages (About Us)
 
 ## 🛠 Getting Started
 
@@ -47,12 +49,12 @@ Extra is a blogging platform for sharing ideas, stories, and more. Extra was bui
 * [bcrypt](https://github.com/bcrypt-ruby/bcrypt-ruby) `3.1.7`
 * [active_link_to](https://github.com/comfy/active_link_to)
 * [simple_form](https://github.com/heartcombo/simple_form)
-* [carrierwave]() `2.0`
-* [activeadmin]()
-* [devise]()
-* [cancancan]()
-* [draper]()
-* [pundit]()
+* [carrierwave](https://github.com/carrierwaveuploader/carrierwave) `2.0`
+* [activeadmin](https://activeadmin.info/documentation.html)
+* [devise](https://github.com/heartcombo/devise)
+* [cancancan](https://github.com/CanCanCommunity/cancancan)
+* [draper](https://github.com/drapergem/draper)
+* [pundit](https://github.com/varvet/pundit)
 
 ## 🗂 Database
 
@@ -60,7 +62,7 @@ Extra currently uses an [SQLite](https://www.sqlite.org/docs.html) database. Whi
 
 An ERD of the database can be found in the project's `docs/` directory.
 
-In some instances you may need to reset the database, or make manual changes. 
+In some instances you may need to reset the database, or make manual changes. To do that, follow the instructions below.
 
 1. Reload the database from the schema.
 
