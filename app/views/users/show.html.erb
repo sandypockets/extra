@@ -1,14 +1,14 @@
 <div class="user-profile-container">
-  <%#= @fav_story %>
 
-      <% @fav_story.each do |fav_story| %>
-        <% @story = Story.find_by(id: fav_story.story_id) %>
-        <h2 ><%= @story.title %></h2>
-      <% end %>
-
+  <% @fav_story.each do |fav_story| %>
+    <% @story = Story.find_by(id: fav_story.story_id) %>
+    <h2 ><%= @story.title %></h2>
+  <% end %>
 
   <div class="avatar-container">
+    <% if @user.avatar.present? %>
       <%= image_tag @user.avatar.avatar_thumb.url, class: 'user-avatar' %>
+    <% end %>
   </div>
 
   <div class="user-stories-wrapper">
