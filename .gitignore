@@ -41,3 +41,7 @@ yarn-debug.log*
 
 # Local ide config
 .idea/
+
+# Image uploads
+public/uploads/story
+public/uploads/user
