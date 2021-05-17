@@ -1,6 +1,6 @@
 class FavouritesController < ApplicationController
 
-  before_action :logged_in, except: :show
+  before_action :logged_in, except: [:show, :index]
 
   def index
     @favourites = Favourite.all
