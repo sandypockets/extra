@@ -10,6 +10,9 @@
     <% end %>
 
 
+    <div class="trix-rte-center">
+    <div class="trix-rte">
+      <div class="story-title-topic-wrapper">
     <div class="new-story-col-2">
     <p class="new-story-title-field">
       <%= f.text_field :title, placeholder: 'Title' %>
@@ -18,12 +21,16 @@
     <%= f.select :topic, ['Select a topic', 'Tutorials', 'Deep Dives', 'Ideas', 'World', 'Productivity', 'Programming', 'Politics', 'Data Science', 'Startups', 'Gaming'] %>
     </div>
     </div>
+      </div>
       <%#= f.text_field :topic %>
     <p class="new-story-body-field">
-      <%= f.text_area :body, placeholder: 'Start writing your next story.' %>
+      <%#= f.text_area :body, placeholder: 'Start writing your next story.' %>
+      <%= f.rich_text_area :body, placeholder: 'Start writing your next story.' %>
       <%= f.file_field :image %>
     </p>
 
     <%= f.submit 'Publish Story' %>
   <% end %>
+</div>
+</div>
 </div>
