@@ -206,14 +206,15 @@ $primaryYellow: #FFC017;
   .edit-profile-edit {
     //min-width: fit-content;
     //max-width: 40vw;
-    width: 40vw;
+    min-width: 22vw;
     height: fit-content;
+    margin: 0 0 0 9vw;
     // margin: 0 3rem 0 60vw;
     // position: fixed;
    // width: 100vw;
 
     .edit-form-p {
-      width: 70%;
+      width: 100%;
 
       input {
         border: black 1px solid;
