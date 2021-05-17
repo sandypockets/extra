@@ -8,6 +8,9 @@ class Story < ApplicationRecord
   # A story can only belong to one user
   belongs_to :user
 
+  # Add Trix Rich Text Editor
+  has_rich_text :body
+
   # Add image uploader
   mount_uploader :image, ImageUploader
 
