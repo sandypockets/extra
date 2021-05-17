@@ -74,8 +74,61 @@ $primaryYellow: #FFC017;
 // Show //
 .user-profile-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
 
+
+  h1 {
+    display: flex;
+    justify-content: center;
+  }
+
+  div.avatar-container {
+    display: flex;
+    justify-content: center;
+
+    .user-avatar {
+      border-radius: 50px;
+    }
+  }
+
+
+  .center {
+    display: flex;
+    justify-content: center;
+  }
+
+  .user-story-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 3rem 0 3rem;
+    width: 70vw;
+
+    .single-story-container {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        margin: 0.5rem 0 3rem 0;
+      }
+
+      .user-story-headings {
+        display: flex;
+      }
+    }
+
+    .user-story-container {
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    img {
+      height: 3rem;
+      border-radius: 50px;
+      margin-right: 1rem;
+    }
+  }
 
 }
 

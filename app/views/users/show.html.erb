@@ -1,23 +1,28 @@
 <div class="user-profile-container">
   <%#= @fav_story %>
-  
-  <% @fav_story.each do |fav_story| %>
-    <% @story = Story.find_by(id: fav_story.story_id) %>
-    <h2><%= @story.title %></h2>
-  <% end %>
 
-  <div class="flex-container">
-    <div class="flex-col">
-      <%= image_tag @user.avatar.avatar_thumb.url %>
+      <% @fav_story.each do |fav_story| %>
+        <% @story = Story.find_by(id: fav_story.story_id) %>
+        <h2 ><%= @story.title %></h2>
+      <% end %>
 
+
+  <div class="avatar-container">
+      <%= image_tag @user.avatar.avatar_thumb.url, class: 'user-avatar' %>
+  </div>
       <h1><%= @user.username.capitalize %>'s Stories</h1>
-    </div>
 
-    <% @user.stories.each do |story| %>
-      <%= image_tag story.image.thumb.url %>
-      <%= story.title %>
-      <%= story.topic %>
-      <%= simple_format story.body %>
-    <% end %>
+  <div class="center">
+    <div class="user-story-container">
+      <% @user.stories.each do |story| %>
+        <div class="single-story-container">
+          <div class="user-story-headings">
+            <%= image_tag story.image.thumb.url %>
+            <h4><%= story.title %> posted in <%= story.topic %></h4>
+          </div>
+          <%= simple_format story.body %>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
