@@ -21,4 +21,5 @@ Rails.application.routes.draw do
   get 'our-story', to: 'pages#our_story'
   get 'terms-and-conditions', to: 'pages#terms'
 
+  get 'favourites', to: 'favourites#index'
 end
