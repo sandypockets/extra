@@ -1,0 +1,31 @@
+<div class="fav-index-container">
+<h1>Reader favourites</h1>
+<div class="card-container">
+
+<% @favourites.each do |fav| %>
+  <% @story_id = @favourites.select(:story_id) %>
+  <% @fav_story = Story.find_by(id: @story_id) %>
+    
+  <div class="stories-index-container">
+    <div class="stories-index-content">
+      <div class="index-stories">
+        <div class="story-card" id="story-card">
+
+          <div class="story-image-header">
+            <% if @fav_story.image.url.present? %>
+              <div class="story-card-thumb-img">
+                <%= link_to @fav_story.title do %>
+                  <%= image_tag @fav_story.image.thumb.url, class: 'story-header-img'%>
+                <% end %>
+              </div>
+            <% end %>
+            <h3><%= link_to @fav_story.title, story_path(@fav_story) %></h3>
+          </div>
+          <p><%= @fav_story.body %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+</div>
+</div>
