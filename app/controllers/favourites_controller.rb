@@ -2,7 +2,12 @@ class FavouritesController < ApplicationController
 
   before_action :logged_in, except: :show
 
-  def show; end
+  def index
+    @favourites = Favourite.all
+  end
+
+  def show
+  end
 
   def create
     @story = Story.find(params[:story_id])
