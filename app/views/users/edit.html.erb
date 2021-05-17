@@ -3,11 +3,14 @@
   <div class="edit-profile-display">
     <div class="flex-center">
       <div class="flex-col">
-        <%= image_tag @user.avatar.avatar_thumb.url %>
+        <% if @user.avatar.present? %>
+          <%= image_tag @user.avatar.avatar_thumb.url %>
+        <% end %>
         <h1><%= @user.username.capitalize %>'s Stories</h1>
       </div>
     </div>
 
+    <% if @user.stories.any? %>
     <div class="display-stories">
       <% @user.stories.each do |story| %>
         <div class="edit-story-image">
@@ -18,6 +21,12 @@
         <%= simple_format story.body %>
         <% end %>
       </div>
+      <% else %>
+        <div class="no-stories">
+          You don't have any stories yet!
+        </div>
+      <% end %>
+
   </div>
 
 
