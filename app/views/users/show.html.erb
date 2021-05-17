@@ -13,19 +13,6 @@
 
   <div class="user-stories-wrapper">
     <h1><%= @user.username.capitalize %>'s Stories</h1>
-
-    <div class="center">
-      <div class="user-story-container">
-        <% @user.stories.each do |story| %>
-          <div class="single-story-container">
-            <div class="user-story-headings">
-              <%= image_tag story.image.thumb.url %>
-              <h4><%= story.title %> posted in <%= story.topic %></h4>
-            </div>
-            <%= simple_format story.body %>
-          <% end %>
-        </div>
-      </div>
-    </div>
+    <%= render 'users/storycards' %>
   </div>
 </div>

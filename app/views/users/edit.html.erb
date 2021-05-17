@@ -1,66 +1,50 @@
+<div class="edit-profile-container-center">
 <div class="edit-profile-container">
 
-  <div class="edit-profile-display">
-    <div class="flex-center">
-      <div class="flex-col">
-        <% if @user.avatar.present? %>
-          <%= image_tag @user.avatar.avatar_thumb.url %>
-        <% end %>
-        <h1><%= @user.username.capitalize %>'s Stories</h1>
-      </div>
+  <div class="edit-profile-avatar">
+    <div class="edit-username-avatar">
+    <% if @user.avatar.present? %>
+      <%= image_tag @user.avatar.avatar_thumb.url %>
+    <% end %>
+    <h1><%= @user.username.capitalize %>'s Stories</h1>
     </div>
 
-    <% if @user.stories.any? %>
-    <div class="display-stories">
-      <% @user.stories.each do |story| %>
-        <div class="edit-story-image">
-          <%= image_tag story.image.url %>
-        </div>
-        <h2><%= link_to "#{story.title}", story_path(story) %></h2>
-        <h3>Posted in <%= story.topic %></h3
-        <%= simple_format story.body %>
-        <% end %>
-      </div>
-      <% else %>
-        <div class="no-stories">
-          You don't have any stories yet!
-        </div>
-      <% end %>
+    <div class="edit-profile-edit">
+      <h1 class="section-heading">Edit your profile.</h1>
 
-  </div>
-
-
-  <div class="edit-profile-edit">
-    <h1 class="section-heading">Edit your profile.</h1>
-
-    <div class="user-form-container">
-      <%= form_for @user do |f| %>
-        <% if @user.errors.any? %>
-          <div class="error-container">
-            <div class="error-wrapper">
-              <% @user.errors.full_messages.each do |err| %>
-                <p class="error-line"><%= err %></p>
-              <% end %>
+      <div class="user-form-container">
+        <%= form_for @user do |f| %>
+          <% if @user.errors.any? %>
+            <div class="error-container">
+              <div class="error-wrapper">
+                <% @user.errors.full_messages.each do |err| %>
+                  <p class="error-line"><%= err %></p>
+                <% end %>
+              </div>
             </div>
+          <% end %>
+          <div class="user-form">
+            <p class="edit-form-p">
+              <%= f.text_field :first_name, placeholder: 'First name' %>
+              <%= f.text_field :last_name, placeholder: 'Last name' %>
+              <%= f.text_field :username, placeholder: 'Username' %>
+              <%= f.email_field :email, placeholder: 'Email' %>
+              <%= f.password_field :password, placeholder: 'Change your password' %>
+              <%= f.password_field :password_confirmation, placeholder: 'Confirm new password' %>
+              <%= f.label 'Avatar' %>
+              <%= f.file_field :avatar, placeholder: 'Avatar' %>
+            </p>
+          </div>
+          <div class="form-submit">
+            <%= f.submit 'Update profile' %>
           </div>
         <% end %>
-        <div class="user-form">
-          <p class="edit-form-p">
-            <%= f.text_field :first_name, placeholder: 'First name' %>
-            <%= f.text_field :last_name, placeholder: 'Last name' %>
-            <%= f.text_field :username, placeholder: 'Username' %>
-            <%= f.email_field :email, placeholder: 'Email' %>
-            <%= f.password_field :password, placeholder: 'Change your password' %>
-            <%= f.password_field :password_confirmation, placeholder: 'Confirm new password' %>
-            <%= f.label 'Avatar' %>
-            <%= f.file_field :avatar, placeholder: 'Avatar' %>
-          </p>
-        </div>
-        <div class="form-submit">
-          <%= f.submit 'Update profile' %>
-        </div>
-      <% end %>
+      </div>
     </div>
-
   </div>
 </div>
+
+  </div>
+
+
+<%#= render 'users/storycards', class: 'storycards-partial' %>
