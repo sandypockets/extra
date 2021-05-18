@@ -43,7 +43,7 @@ div.topics-container {
 
 // Story SHOW
 .story-header-img {
-  width: 100%;
+  //width: 100%;
 }
 
 img.story-header-img {
@@ -262,7 +262,7 @@ h1.section-heading {
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    padding: 0 1.5rem 0 1.5rem;
+    // padding: 0 1.5rem 0 1.5rem;
 
     .index-stories {
       display: flex;
@@ -273,14 +273,15 @@ h1.section-heading {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        margin: 0 2rem 3rem 2rem;
+        margin: 0 1rem 3rem 1rem;
         max-width: 20rem;
         min-width: 15rem;
-        padding: 0 15px 0 15px;
+        // padding: 0 15px 0 15px;
 
         .trix-content {
           max-height: 9em;
           overflow: hidden;
+          line-height: 1;
 
           pre {
             display: none;
@@ -289,11 +290,17 @@ h1.section-heading {
 
         .story-image-header {
           display: flex;
-          flex-direction: column-reverse;
+          flex-direction: row-reverse;
+          justify-content: flex-end;
           height: 3em;
+
+          .written-by-title {
+            margin-top: 0.6em;
+          }
 
           a {
             display: flex;
+            margin-top: 1em;
           }
 
           p {
@@ -316,6 +323,7 @@ h1.section-heading {
               border-radius: 45px;
               height: 40px;
               width: 40px;
+              margin-top: 1.5em;
             }
 
             h3 {
@@ -347,3 +355,5 @@ h1.section-heading {
   height: 1px;
   margin: 2rem 1rem 2rem 1rem;
 }
+
+// Stories Index Cards
