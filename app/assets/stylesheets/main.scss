@@ -3,6 +3,7 @@
 @import './sessions';
 @import './stories';
 @import './users';
+@import './footer';
 
 // trix
 // Remove actiontext.scss for custom styling
@@ -219,4 +220,15 @@ header {
   div#story-card.story-card {
     max-width: 40rem;
   }
+}
+
+
+.center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.margin-top-2 {
+  margin-top: 2rem;
 }
