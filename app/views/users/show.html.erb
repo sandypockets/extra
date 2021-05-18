@@ -17,13 +17,13 @@
     </div>
 
     <div class="user-favourites-wrapper">
-
-      <div class="center edit-center">
+      <div class="center">
         <div class="user-story-container user-story-container-2">
           <% if @fav_story.any? %>
             <h2 class="subheading-h2">Favourites</h2>
             <% @fav_story.each do |story| %>
-              <div class="single-story-container user-edit-page-story">
+              <div class="user-edit-story-center">
+              <div class="single-story-container">
                 <div class="user-story-headings">
                   <% @story_id = story.story_id %>
                   <% @a_story = Story.find_by(id: @story_id) %>
@@ -38,12 +38,11 @@
             You don't have any stories yet!
           <% end %>
           </div>
+          </div>
         </div>
       </div>
-
-
-
     </div>
+
   </div>
 
 </div>
