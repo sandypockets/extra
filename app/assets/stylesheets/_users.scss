@@ -95,13 +95,14 @@ $primaryYellow: #FFC017;
 
   .center {
     display: flex;
+    flex-direction: column;
     justify-content: center;
   }
 
   .user-story-container {
     display: flex;
     justify-content: center;
-    margin: 3rem 3rem 0 3rem;
+    //margin: 3rem 3rem 0 3rem;
 
     .single-story-container {
       display: flex;
@@ -114,7 +115,7 @@ $primaryYellow: #FFC017;
       .user-story-headings {
         display: flex;
         flex-direction: row;
-
+        width: 100%;
 
         img {
           height: 3rem;
@@ -328,3 +329,27 @@ figure.attachment {
     justify-content: center;
   }
 }
+
+.user-stories-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+//.user-edit-story-center {
+//  display: flex;
+//  justify-content: center;
+//}
+
+.flex-col-3 {
+  display: flex;
+  flex-direction: column;
+}
+
+//.test-center {
+//  display: flex;
+//  justify-content: center;
+//}
+
+//.test-center-2 {
+//  width: 50%;
+//}
