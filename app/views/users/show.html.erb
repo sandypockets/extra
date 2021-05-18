@@ -2,7 +2,6 @@
 
   <% @fav_story.each do |fav_story| %>
     <% @story = Story.find_by(id: fav_story.story_id) %>
-    <h2 ><%= @story.title %></h2>
   <% end %>
 
   <div class="avatar-container">
@@ -11,8 +10,40 @@
     <% end %>
   </div>
 
-  <div class="user-stories-wrapper">
-    <h1><%= @user.username.capitalize %>'s Stories</h1>
-    <%= render 'users/storycards' %>
+  <div class="fav-story-wrapper">
+    <div class="user-stories-wrapper">
+      <h1><%= @user.username.capitalize %>'s Stories</h1>
+      <%= render 'users/storycards' %>
+    </div>
+
+    <div class="user-favourites-wrapper">
+
+      <div class="center edit-center">
+        <div class="user-story-container user-story-container-2">
+          <% if @fav_story.any? %>
+            <h2 class="subheading-h2">Favourites</h2>
+            <% @fav_story.each do |story| %>
+              <div class="single-story-container user-edit-page-story">
+                <div class="user-story-headings">
+                  <% @story_id = story.story_id %>
+                  <% @a_story = Story.find_by(id: @story_id) %>
+                  <% if @a_story.image.thumb.present? %>
+                    <%= image_tag @story.image.thumb.url %>
+                  <% end %>
+                  <h4><%= link_to @a_story.title, story_path(@a_story) %> posted in <%= @a_story.topic %></h4>
+                </div>
+                <%#= story.body %>
+            <% end %>
+          <% else %>
+            You don't have any stories yet!
+          <% end %>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
   </div>
+
 </div>
