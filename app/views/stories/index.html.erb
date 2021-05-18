@@ -28,17 +28,23 @@
         <div class="story-card" id="story-card">
 
           <div class="story-image-header">
-          <% if story.image.url.present? %>
+            <% if story.image.url.present? %>
+              <div class="img-and-avatar">
             <div class="story-card-thumb-img">
-              <%= link_to story.title do %>
                 <%= image_tag story.image.thumb.url, class: 'story-header-img'%>
               <% end %>
             </div>
-          <% end %>
+            <div class="written-by">
+              <p><%= link_to story.user.username, user_path(story.user) %></p>
+            </div>
+            </div>
+              <%= link_to story.title do %>
+            <% end %>
+
 
           <h3><%= link_to story.title, story_path(story) %></h3>
           </div>
-          <p><%= story.body %></p>
+          <%= story.body %>
         </div>
 
       <% end %>

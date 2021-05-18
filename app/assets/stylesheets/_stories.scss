@@ -273,7 +273,7 @@ h1.section-heading {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        margin: 0 2rem 0 2rem;
+        margin: 0 2rem 3rem 2rem;
         max-width: 20rem;
         min-width: 15rem;
         padding: 0 15px 0 15px;
@@ -289,11 +289,28 @@ h1.section-heading {
 
         .story-image-header {
           display: flex;
-          justify-content: flex-start;
+          flex-direction: column-reverse;
           height: 3em;
+
+          a {
+            display: flex;
+          }
+
+          p {
+            vertical-align: center;
+          }
+
+          .img-and-avatar {
+            display: flex;
+            justify-content: flex-start;
+          }
 
           .story-card-thumb-img {
             width: 45px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
 
             img {
               border-radius: 45px;
@@ -303,6 +320,10 @@ h1.section-heading {
 
             h3 {
               margin-left: 1em;
+            }
+
+            .written-by {
+              width: fit-content;
             }
           }
         }
@@ -314,7 +335,7 @@ h1.section-heading {
         p {
           max-height: 5em;
           overflow: hidden;
-          margin-top: 0;
+          // margin-top: 0;
         }
       }
     }
