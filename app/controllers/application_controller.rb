@@ -37,4 +37,8 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  # def is_admin
+  #   false unless @current_user.is_admin == true
+  # end
+
 end
