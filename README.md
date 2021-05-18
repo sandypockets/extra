@@ -11,7 +11,9 @@ Extra is a blogging platform for sharing ideas, stories, and more. Extra was bui
 * Visitors (not logged in) can read stories
 * User sign up and authentication
 * Users can upload images for avatars or stories
-* Users (logged in) can write, edit and delete (their own) stories
+* Users can edit their profile or change their password
+* Users can write, edit and delete (their own) stories
+* Users can comment on stories
 * Users can favourite stories
 * Users can filter stories by topic
 * Rich Text Editor for writing stories
@@ -21,7 +23,7 @@ Extra is a blogging platform for sharing ideas, stories, and more. Extra was bui
 * Admin dashboard
 * Admins can create, edit, or delete stories, users, and comments
 * Admins can create new Admin users
-* Admins can create, edit, or delete static pages (About Us)
+* Admins can create, edit, or delete static pages (About Us, Terms of Service, etc)
 
 ## 🛠 Getting Started
 
@@ -41,7 +43,7 @@ Extra is a blogging platform for sharing ideas, stories, and more. Extra was bui
 
 4. Navigate to [`localhost:3000`](http:localhost:3000) in your favourite web browser.
 
-> If you're seeing an error stating that there are migrations pending, run through steps 1 and 2 of the `Database` section below to resolve it.
+> If you're seeing an error stating that there are migrations pending, run through steps 1 and 2 of the `Database` section below to resolve it. Once complete, run `rails server`.
 
 ## 📦 Dependencies
 
@@ -108,6 +110,7 @@ $ @user.save
 Stretch features to be implemented at a later date:
 * Users can favourite topics
 * Users can see which topics other users have marked as favourite
+* Password reset emails
 
 ## 🎯 Wireframe
 * [Wireframe on Figma](https://www.figma.com/file/DH4RNUH5M46X7nSDhBvarF/Extra-Wireframe-GitHub?node-id=0%3A1)
