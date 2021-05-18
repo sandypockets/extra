@@ -13,77 +13,83 @@
 
     <div class="story-content-container">
       <div class="story-content">
-
         <h1><%= @story.title %></h1>
+
         <% if @story.user.present? %>
           <% @user_path = @story.user.username %>
           <h3><%= link_to @story.user.username, user_path(@story.user) %></h3>
         <% end %>
+
         <% if @story.topic != 'Select a topic' %>
           <h3><%= @story.topic %></h3>
         <% end %>
 
         <% if has_session? %>
-
           <% if @story.favourites.where(user: @current_user).any? %>
             <%= link_to "Remove favourite", story_favourite_path(@story), method: :delete %>
           <% else %>
             <%= link_to "Favourite", story_favourite_path(@story), method: :post %>
           <% end %>
-
         <% end %>
-
 
         <p><%= @story.body %></p>
       </div>
     </div>
 
-    <% if @story.user == @current_user || @current_user.is_admin? %>
-      <div class="story-actions">
-        <%= link_to 'Delete your story', story_path(@story), method: :delete, data: { confirm: 'Deleting is forever. Are you sure?' } %>
-        <% if @story.created_at > 2.hours.ago || @current_user.is_admin? %>
-          <%= link_to 'Edit this story', edit_story_path(@story) %>
-        <% end %>
-      </div>
+    <% if @current_user %>
+      <% if @story.user == @current_user || @current_user.is_admin? %>
+        <div class="story-actions">
+          <%= link_to 'Delete your story', story_path(@story), method: :delete, data: { confirm: 'Deleting is forever. Are you sure?' } %>
+
+          <% if @story.created_at > 2.hours.ago || @current_user.is_admin? %>
+            <%= link_to 'Edit this story', edit_story_path(@story) %>
+          <% end %>
+
+        </div>
+      <% end %>
     <% end %>
 
-    <div class="center">
+    <div class="center-3">
+    <div class="center-2">
     <div class="comments-section-wrapper">
-    <h3 class="comments-header">Comments</h3>
+        <% if @story.comments.present? %>
+    <h2 class="comments-header">Comments</h2>
     <div class="story-comments-container">
-<!--      <div class="flex-col">-->
       <div class="flex-col-2">
-        <% @story.comments.order('created_at desc').each do |comment| %>
-
-          <div class="flex-wrapper">
-          <div class="comment-wrapper">
-            <div class="comment-text-wrapper">
-              <%= simple_format comment.body %>
-              <p>Posted by
-                <% if comment.user.present? %>
-                  <%= link_to comment.user.username.capitalize, user_path(comment.user) %> |
-                <% else %>
-                  Anonymous
-                <% end %>
-                <i><%= time_ago_in_words comment.created_at %> ago</i></p>
+          <% @story.comments.order('created_at desc').each do |comment| %>
+            <div class="flex-wrapper">
+            <div class="comment-wrapper">
+              <div class="comment-text-wrapper">
+                <%= simple_format comment.body %>
+                <p>Posted by
+                  <% if comment.user.present? %>
+                    <%= link_to comment.user.username.capitalize, user_path(comment.user) %> |
+                  <% else %>
+                    Anonymous
+                  <% end %>
+                  <i><%= time_ago_in_words comment.created_at %> ago</i></p>
+              </div>
             </div>
-          </div>
-          </div>
-
+            </div>
+          <% end %>
+        <% else %>
+        <div class="no-comments-yet">
+          <h3>No comments yet. Why not be the first?</h3>
         <% end %>
       </div>
 
-        <div class="comments-form">
+      <% if @story.comments.present? %>
           <h4>Add a comment</h4>
+        <% end %>
           <%= simple_form_for [@story, Comment.new] do |f| %>
-          <%= f.input :body %>
-          <%= f.button :submit %>
+          <%= f.rich_text_area :body %>
+          <%= f.button :submit, class: 'submit-comment-btn' %>
           <% end %>
+      </div>
+        </div>
         </div>
 
     </div>
-
-  </div>
     </div>
   </div>
-</div>
+    </div>
