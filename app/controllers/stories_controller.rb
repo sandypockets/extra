@@ -60,4 +60,9 @@ class StoriesController < ApplicationController
     params.require(:story).permit(:title, :topic, :body, :image)
   end
 
+  def find_user_by_story
+    @username = Story.user.username
+    @user = User.find_by(username: @username)
+  end
+
 end
