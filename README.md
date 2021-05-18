@@ -14,6 +14,7 @@ Extra is a blogging platform for sharing ideas, stories, and more. Extra was bui
 * Users (logged in) can write, edit and delete (their own) stories
 * Users can favourite stories
 * Users can filter stories by topic
+* Rich Text Editor for writing stories
 
 ### Admin Features
 
@@ -39,6 +40,8 @@ Extra is a blogging platform for sharing ideas, stories, and more. Extra was bui
    ```
 
 4. Navigate to [`localhost:3000`](http:localhost:3000) in your favourite web browser.
+
+> If you're seeing an error stating that there are migrations pending, run through steps 1 and 2 of the `Database` section below to resolve it.
 
 ## 📦 Dependencies
 
@@ -100,6 +103,11 @@ $ @user.is_admin = true
 $ @user.save
 ```
 5. You can exit the Rails Console with `control`+`d`
+
+## 🚀 Project Roadmap
+Stretch features to be implemented at a later date:
+* Users can favourite topics
+* Users can see which topics other users have marked as favourite
 
 ## 🎯 Wireframe
 * [Wireframe on Figma](https://www.figma.com/file/DH4RNUH5M46X7nSDhBvarF/Extra-Wireframe-GitHub?node-id=0%3A1)
