@@ -1,0 +1,17 @@
+<footer class="footer">
+
+  <nav class="footer-nav">
+    <% if @current_user.is_admin? %>
+      <%= link_to 'Admin', admin_stories_path %>
+    <% end %>
+
+    <%= link_to 'Read', root_path %>
+    <%= link_to 'Our Story', root_path %>
+    <%= link_to 'Write', new_story_path %>
+    <%= link_to 'Terms', root_path %>
+  </nav>
+
+  <div class="center margin-top-2">
+    Made with Ruby on Rails
+  </div>
+</footer>
