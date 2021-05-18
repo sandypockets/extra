@@ -140,10 +140,16 @@ $primaryYellow: #FFC017;
     .user-story-container {
       display: flex;
       flex-direction: column;
+
     }
-
-
   }
+
+  .fav-story-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
 
 }
 
@@ -314,5 +320,11 @@ figure.attachment {
 
 .user-story-container-2 {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+
+  .subheading-h2 {
+    display: flex;
+    justify-content: center;
+  }
 }
