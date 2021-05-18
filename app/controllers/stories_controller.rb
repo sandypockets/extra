@@ -39,13 +39,15 @@ class StoriesController < ApplicationController
 
   def edit
     @story = Story.find(params[:id])
-    redirect_to root_path if @story.created_at < 2.hours.ago
-    redirect_to root_path if @story.user != @current_user
+    unless @current_user.is_admin?
+      redirect_to root_path if @story.created_at < 2.hours.ago
+      redirect_to root_path unless @current_user == @story.user
+    end
   end
 
   def update
     @story = Story.find(params[:id])
-    if @story.user == @current_user
+    if @story.user == @current_user || @current_user.is_admin?
       if @story.update(form_params)
         redirect_to story_path(@story)
       else
