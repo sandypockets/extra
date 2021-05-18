@@ -16,7 +16,7 @@ Extra is a blogging platform for sharing ideas, stories, and more. Extra was bui
 * Users can comment on stories
 * Users can favourite stories
 * Users can filter stories by topic
-* Rich Text Editor for writing stories
+* Rich Text Editor for writing stories or comments
 
 ### Admin Features
 
