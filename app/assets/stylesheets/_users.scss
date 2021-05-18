@@ -262,6 +262,11 @@ img.user-story-hero {
       flex-direction: column;
       justify-content: center;
 
+      h1 {
+        display: flex;
+        justify-content: center;
+      }
+
       img {
         border-radius: 100%;
       }
