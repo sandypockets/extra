@@ -41,25 +41,37 @@
     <% if @story.user == @current_user %>
       <div class="story-actions">
         <%= link_to 'Delete your story', story_path(@story), method: :delete, data: { confirm: 'Deleting is forever. Are you sure?' } %>
-        <% if @story.created_at > 2.hours.ago %>
+        <% if @story.created_at > 2.hours.ago || @current_user.is_admin? %>
           <%= link_to 'Edit this story', edit_story_path(@story) %>
         <% end %>
       </div>
     <% end %>
 
+    <div class="center">
+    <div class="comments-section-wrapper">
+    <h3 class="comments-header">Comments</h3>
     <div class="story-comments-container">
-      <div class="flex-col">
-        <h3>Comments</h3>
+<!--      <div class="flex-col">-->
+      <div class="flex-col-2">
         <% @story.comments.order('created_at desc').each do |comment| %>
-          <%= simple_format comment.body %>
-          <p>Posted by
-            <% if comment.user.present? %>
-              <%= link_to comment.user.username.capitalize, user_path(comment.user) %> |
-            <% else %>
-              Anonymous
-            <% end %>
-          <%= time_ago_in_words comment.created_at %> ago</p>
+
+          <div class="flex-wrapper">
+          <div class="comment-wrapper">
+            <div class="comment-text-wrapper">
+              <%= simple_format comment.body %>
+              <p>Posted by
+                <% if comment.user.present? %>
+                  <%= link_to comment.user.username.capitalize, user_path(comment.user) %> |
+                <% else %>
+                  Anonymous
+                <% end %>
+                <i><%= time_ago_in_words comment.created_at %> ago</i></p>
+            </div>
+          </div>
+          </div>
+
         <% end %>
+      </div>
 
         <div class="comments-form">
           <h4>Add a comment</h4>
@@ -69,9 +81,9 @@
           <% end %>
         </div>
 
-      </div>
     </div>
 
   </div>
-
+    </div>
+  </div>
 </div>
