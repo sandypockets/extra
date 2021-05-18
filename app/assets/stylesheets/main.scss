@@ -203,7 +203,20 @@ header {
   h1.section-heading {
 
   }
+}
 
+@media (max-width: 1100px) {
+  div.topics-container nav.topics {
+    max-width: 80vw;
+  }
+}
 
+@media (max-width: 751px) {
+  div.topics-container nav.topics {
+    max-width: 80vw;
+  }
 
+  div#story-card.story-card {
+    max-width: 40rem;
+  }
 }
