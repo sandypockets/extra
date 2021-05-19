@@ -274,10 +274,14 @@ h1.section-heading {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        margin: 0 1rem 3rem 1rem;
+        margin: 0 0.1rem 1rem 0.1rem;
         max-width: 20rem;
         min-width: 15rem;
         // padding: 0 15px 0 15px;
+
+        box-shadow: 0 0 16px #ccc;
+        padding: 1em;
+        border-radius: 10px;
 
         .trix-content {
           max-height: 9em;
