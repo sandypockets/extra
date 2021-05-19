@@ -282,6 +282,7 @@ h1.section-heading {
         box-shadow: 0 0 16px #ccc;
         padding: 1em;
         border-radius: 10px;
+        transition: 0.5s;
 
         .trix-content {
           max-height: 9em;
@@ -351,6 +352,11 @@ h1.section-heading {
           overflow: hidden;
           // margin-top: 0;
         }
+      }
+
+      .story-card:hover {
+        transform: translateY(-5px);
+        transition: 1s;
       }
     }
   }
