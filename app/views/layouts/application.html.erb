@@ -16,8 +16,8 @@
     <%= render 'layouts/logged_in_header' %>
   <% else %>
     <%= render 'layouts/logged_out_header' %>
-    <% unless current_page?(url_for(:controller => 'sessions', :action => 'new')) %>
-      <%=  render 'layouts/hero'  %>
+    <% if current_page?(root_path) %>
+      <%= render 'layouts/hero' %>
     <% end %>
   <% end %>
 
