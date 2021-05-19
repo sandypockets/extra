@@ -197,6 +197,18 @@ header {
   }
 }
 
+.center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.margin-top-2 {
+  margin-top: 2rem;
+}
+
+
+
 @media (max-width: 1300px) {
   .box-shadow {
     margin: 6em 12em 3em 12em;
@@ -224,12 +236,3 @@ header {
 }
 
 
-.center {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.margin-top-2 {
-  margin-top: 2rem;
-}
