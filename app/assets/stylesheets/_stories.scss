@@ -28,11 +28,13 @@ div.topics-container {
     div.topic-btn {
       margin: 0 0.5rem 0.5rem 0.5rem;
       border-color: $primaryYellow;
+      transition: 0.5s;
       //background-color: black;
     }
     .topic-btn:hover {
       background-color: $primaryYellow;
       border-color: $primaryYellow;
+      transition: 0.5s;
       a {
         color: $primaryBlue;
       }
@@ -362,7 +364,7 @@ h1.section-heading {
       .story-card:hover {
         transform: translateY(-5px);
         transition: 0.5s;
-        box-shadow: 0 0 20px #ececec;
+        box-shadow: 5px 5px 20px #ececec;
 
         .trix-content {
           color: black;
