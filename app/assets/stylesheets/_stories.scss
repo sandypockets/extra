@@ -414,3 +414,26 @@ h1.section-heading {
 }
 
 // Stories Index Cards
+
+
+.bookmark-svg {
+  height: 23px;
+  width: 23px;
+  margin: 2em;
+  transition: 0.5s;
+
+  path {
+    fill: $primaryYellow;
+  }
+}
+
+.bookmark-svg:hover {
+  transform: translateY(-6px);
+  transition: 0.7s;
+  box-shadow: 5px 5px 20px #ececec;
+
+  path {
+    fill: #ffc558;
+    transition: 2s;
+  }
+}
