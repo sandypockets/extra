@@ -70,3 +70,6 @@ gem 'devise'
 gem 'cancancan'
 gem 'draper'
 gem 'pundit'
+
+# Add SVG images inline
+# gem 'inline_svg'
