@@ -15,22 +15,24 @@
       <div class="story-content">
         <h1><%= @story.title %></h1>
 
+        <div class="written-by">
         <% if @story.user.present? %>
           <% @user_path = @story.user.username %>
-          <h3>Written by <%= link_to @story.user.username, user_path(@story.user) %></h3>
+            <h3>Written by <span class="highlight"><%= link_to @story.user.username.capitalize, user_path(@story.user) %></span>
+            <% if @story.topic != 'Select a topic' %>
+               in <span class="highlight"><%= link_to @story.topic, root_path(topic: @story.topic) %></span>
+            <% end %>
+          </h3>
         <% end %>
+        </div>
 
-        <% if @story.topic != 'Select a topic' %>
-          <h3>Posted in <%= link_to @story.topic, root_path(topic: @story.topic) %></h3>
-        <% end %>
-
-        <% if has_session? %>
-          <% if @story.favourites.where(user: @current_user).any? %>
-            <%= link_to "Remove favourite", story_favourite_path(@story), method: :delete %>
-          <% else %>
-            <%= link_to "Favourite", story_favourite_path(@story), method: :post %>
-          <% end %>
-        <% end %>
+        <%# if has_session? %>
+          <%# if @story.favourites.where(user: @current_user).any? %>
+            <%#= link_to "Remove favourite", story_favourite_path(@story), method: :delete %>
+          <%# else %>
+            <%#= link_to "Favourite", story_favourite_path(@story), method: :post %>
+          <%# end %>
+        <%# end %>
 
         <p><%= @story.body %></p>
       </div>
