@@ -26,13 +26,13 @@
         <% end %>
         </div>
 
-        <%# if has_session? %>
-          <%# if @story.favourites.where(user: @current_user).any? %>
-            <%#= link_to "Remove favourite", story_favourite_path(@story), method: :delete %>
-          <%# else %>
-            <%#= link_to "Favourite", story_favourite_path(@story), method: :post %>
-          <%# end %>
-        <%# end %>
+        <% if has_session? %>
+          <% if @story.favourites.where(user: @current_user).any? %>
+            <%= link_to "Remove favourite", story_favourite_path(@story), method: :delete %>
+          <% else %>
+            <%= link_to "Favourite", story_favourite_path(@story), method: :post %>
+          <% end %>
+        <% end %>
 
         <p><%= @story.body %></p>
       </div>
