@@ -420,6 +420,9 @@ h1.section-heading {
   height: 23px;
   width: 23px;
   margin: 2em;
+  padding: 1em 1em 1.1em 1em;
+  box-shadow: 0 0 10px #ccc;
+  border-radius: 5px;
   transition: 0.5s;
 
   path {
