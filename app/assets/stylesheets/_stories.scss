@@ -157,7 +157,6 @@ img.story-header-img {
       display: flex;
       flex-direction: row;
       justify-content: center;
-      margin-bottom: 1.5em;
     }
 
     .story-form {
@@ -260,10 +259,11 @@ img.story-header-img {
 .section-heading-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 1em;
+  //margin-bottom: 1em;
 }
 
 h1.section-heading {
+  font-size: xxx-large;
   //background: linear-gradient(180deg, white 65%, $primaryYellow 65%);
 }
 
