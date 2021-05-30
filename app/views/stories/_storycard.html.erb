@@ -6,15 +6,12 @@
       <div class="story-image-header">
         <div class="written-by-title">
           <h3><%= link_to story.title, story_path(story) %></h3>
-<!--          <div class="written-by-2">-->
-<!--            <p>Written by <%#= link_to story.user.username, user_path(story.user) %></p>-->
-<!--          </div>-->
         </div>
         <% if story.image.url.present? %>
           <div class="img-and-avatar">
             <div class="story-card-thumb-img">
-              <%#= image_tag story.image.thumb.url, class: 'story-header-img' %>
-              <%= image_tag story.user.avatar.avatar_thumb.url, class: 'story-header-img' %>
+              <%= image_tag story.image.thumb.url, class: 'story-header-img' %>
+              <%#= image_tag story.user.avatar.avatar_thumb.url, class: 'story-header-img' %>
         <% end %>
         </div>
         </div>
