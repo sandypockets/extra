@@ -54,13 +54,10 @@ header {
         font-weight: $logoFontWeight;
       }
 
-      a {
+      a.logo {
         background: $highlight;
-
-      }
-
-      .logo {
         color: black;
+        font-size: xx-large;
       }
 
       h2 {
