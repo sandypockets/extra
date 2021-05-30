@@ -103,12 +103,20 @@ header {
   a:link {
     text-decoration: none;
     height: fit-content;
+
+    background: $highlight repeat-x 0 100%;
+    background-size: 4px 20px;
+    //text-decoration: none;
+    transition: background-size .2s;
   }
 
   a:hover {
-    background: $highlight;
+    // background: $highlight;
+    background-size: 50px 60px;
+    transition: 0.5s;
   }
 }
+
 
 
 .hero-container {
