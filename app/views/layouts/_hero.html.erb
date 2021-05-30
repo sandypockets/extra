@@ -1,13 +1,20 @@
 <div class="hero-container">
   <div class="hero-line"></div>
   <div class="hero-background">
+
+    <div class="hero-wrapper">
+
     <div class="hero-content">
-      <h1>Where good ideas<br/> find you</h1>
-      <div class="hero-p">
-      <p>
+      <h1 id="hero-tag">Where good ideas<br/> find you</h1>
+      <div class="hero-p" id="div-hero-p">
+      <p id="hero-tag-p">
         Read and share new perspectives on just about any topic. Everyone’s welcome.
       </p>
       </div>
     </div>
+
+    <%= render inline: Rails.root.join('public/undraw_book_lover_mkck.svg').read %>
+
+  </div>
   </div>
 </div>

@@ -110,8 +110,13 @@ header {
 
   .hero-background {
     background-color: $primaryYellow;
-    height: 25vh;
+    height: 30vh;
     margin: 0;
+
+    .hero-wrapper {
+      display: flex;
+      flex-direction: row;
+    }
 
     .hero-content {
       display: flex;
@@ -122,30 +127,40 @@ header {
         flex-direction: row;
         justify-content: flex-start;
         margin-top: 0;
-        margin-left: 3rem;
-        padding-top: 2.5rem;
+        margin-left: 6rem;
+        padding-top: 3.5rem;
         margin-bottom: 0;
         padding-bottom: 0;
+        font-size: xxx-large;
       }
 
       .hero-p {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
-        padding: 0 0 0 3rem;
+        padding: 0 0 0 6rem;
         margin: 0;
         width: 45vw;
+        font-size: larger;
       }
 
       .hero-btn {
         margin: 1rem 0 0 8rem;
       }
     }
+
+    svg {
+      height: 25vh;
+      padding: 10px 5px 5px 5px;
+      width: auto;
+      margin: auto;
+    }
+
   }
 }
 
 .btn {
-  padding: 4px 6px 4px 6px;
+  padding: 4px  6px 4px 6px;
   border: black solid 2px;
   border-radius: 25px;
   width: fit-content;
@@ -224,6 +239,24 @@ header {
 @media (max-width: 751px) {
   .box-shadow {
     margin: 6em 6em 3em 6em;
+  }
+
+  .hero-container {
+
+    div.hero-content {
+      h1#hero-tag {
+        font-size: xx-large;
+        margin-left: 4rem;
+      }
+
+      div#div-hero-p {
+        padding-left: 4rem;
+      }
+
+      p#hero-tag-p {
+        padding-left: 0;
+      }
+    }
   }
 
   div.topics-container nav.topics {
