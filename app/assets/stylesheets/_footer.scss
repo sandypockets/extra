@@ -1,3 +1,6 @@
+$primaryYellow: #FFC017;
+$highlight: linear-gradient(180deg, $primaryYellow 65%, white 65%);
+
 footer.footer {
   display: flex;
   flex-direction: column;
@@ -11,13 +14,23 @@ footer.footer {
     flex-direction: column;
     justify-content: center;
 
-
     .footer-nav {
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
       width: 40%;
       margin: auto;
+
+      a {
+        color: black;
+        text-decoration: none;
+        transition: 0.5s;
+      }
+
+      a:hover {
+        background: $highlight;
+        transition: 0.5s;
+      }
     }
   }
 
