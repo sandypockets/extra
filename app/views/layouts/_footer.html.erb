@@ -1,17 +1,18 @@
 <footer class="footer">
+  <div class="footer-wrapper">
+    <nav class="footer-nav">
+      <% if @current_user && @current_user.is_admin == true %>
+        <%= link_to 'Admin', admin_stories_path %>
+      <% end %>
 
-  <nav class="footer-nav">
-    <% if @current_user && @current_user.is_admin == true %>
-      <%= link_to 'Admin', admin_stories_path %>
-    <% end %>
+      <%= link_to 'Read', root_path %>
+      <%= link_to 'Our Story', root_path %>
+      <%= link_to 'Write', new_story_path %>
+      <%= link_to 'Terms', root_path %>
+    </nav>
 
-    <%= link_to 'Read', root_path %>
-    <%= link_to 'Our Story', root_path %>
-    <%= link_to 'Write', new_story_path %>
-    <%= link_to 'Terms', root_path %>
-  </nav>
-
-  <div class="center margin-top-2">
-    Made with Ruby on Rails
+    <div class="margin-top-2 footer-tag">
+      Made with Ruby on Rails
+    </div>
   </div>
 </footer>
