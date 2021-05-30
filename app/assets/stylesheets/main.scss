@@ -229,6 +229,11 @@ header {
   }
 }
 
+@media (max-width: 1380px) {
+  h1#sign-up-heading {
+    font-size: xx-large;
+  }
+}
 
 
 @media (max-width: 1300px) {
@@ -306,6 +311,29 @@ header {
   nav.footer-nav {
     a {
       margin: 0 0.5em 0 0.5em;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  h1#sign-up-heading {
+    font-size: x-large;
+  }
+
+  .user-form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 465px) {
+  h1#sign-up-heading {
+    font-size: larger;
+    display: flex;
+    flex-direction: column;
+
+    .right-word {
+      margin: 0;
+      width: fit-content;
     }
   }
 }

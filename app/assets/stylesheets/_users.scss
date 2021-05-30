@@ -56,7 +56,9 @@ $primaryYellow: #FFC017;
 
     input {
       margin-bottom: 10px;
-      border: none;
+      border: #ccc 1px solid;
+      border-radius: 5px;
+      padding: 0.5em 0.5em 0.5em 0.5em;
     }
 
     input:focus {
