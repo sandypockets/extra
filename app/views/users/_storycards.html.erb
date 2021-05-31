@@ -4,6 +4,8 @@
       <% @user.stories.each do |story| %>
         <div class="single-story-container">
             <div class="flex-col-3">
+
+              <div class="story-card-things">
               <div class="user-story-headings">
                 <% if story.image.thumb.present? %>
                   <%= image_tag story.image.thumb.url %>
@@ -15,6 +17,7 @@
       <h3 class="no-favs"><%= @user.username.capitalize %> hasn't published any stories yet!</h3>
         <% end %>
       </div>
+    </div>
     </div>
   </div>
 </div>
