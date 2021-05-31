@@ -16,6 +16,65 @@
 //
 //   .status_tag { background: #6090DB; }
 
+$primaryYellow: #FFC017;
+$logoFont: 'Newsreader';
+$secondaryFont: 'Inter';
+$logoFontWeight: 100;
+$highlight: linear-gradient(180deg, $primaryYellow 65%, white 65%);
+
+
 .col-password_digest {
   display: none;
+}
+
+#header {
+  h1#site_title {
+    color: black;
+  }
+}
+
+body.active_admin {
+  div.header#header {
+    background-image: none;
+    background-color: $primaryYellow;
+
+
+    ul.header-item {
+
+      li.current {
+
+        a {
+          background: white;
+        }
+      }
+
+
+      li.menu_item {
+        a {
+          color: black;
+          text-shadow: none;
+        }
+
+        a:hover {
+          background: white;
+        }
+      }
+    }
+  }
+}
+
+#title_bar.title_bar {
+  background-color: $primaryYellow;
+  background-image: none;
+  border: none;
+
+  span.breadcrumb a, span.breadcrumb_sep {
+    color: black;
+    text-shadow: none;
+  }
+
+  h2#page_title {
+    color: black;
+    text-shadow: none;
+  }
 }
