@@ -10,15 +10,14 @@
                 <% end %>
                 <h4><%= link_to story.title, story_path(story) %> posted in <%= story.topic %></h4>
               </div>
-              <%#= story.body %>
       <% end %>
     <% else %>
-      You don't have any stories yet!
+      <h3 class="no-favs"><%= @user.username.capitalize %> hasn't published any stories yet!</h3>
         <% end %>
       </div>
     </div>
-    </div>
-    </div>
+  </div>
+</div>
 
 
 
