@@ -18,5 +18,5 @@ ActiveAdmin.register Story do
   def to_param
     id.to_s + '-' + title.parameterize
   end
-  
+
 end
