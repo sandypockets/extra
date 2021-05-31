@@ -31,6 +31,10 @@ $highlight: linear-gradient(180deg, $primaryYellow 65%, white 65%);
   h1#site_title {
     color: black;
   }
+
+  ul#utility_nav li.menu_item a {
+    color: black;
+  }
 }
 
 body.active_admin {
@@ -38,16 +42,12 @@ body.active_admin {
     background-image: none;
     background-color: $primaryYellow;
 
-
     ul.header-item {
-
       li.current {
-
         a {
           background: white;
         }
       }
-
 
       li.menu_item {
         a {
