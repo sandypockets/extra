@@ -358,3 +358,11 @@ figure.attachment {
   display: flex;
   flex-direction: column;
 }
+
+.no-favs {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+  padding: 10px;
+  background: $primaryYellow;
+}
