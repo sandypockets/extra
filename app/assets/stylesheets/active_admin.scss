@@ -59,6 +59,10 @@ body.active_admin {
           background: white;
         }
       }
+
+      li.menu_item#dashboard, li.menu_item#pages {
+        display: none;
+      }
     }
   }
 }
