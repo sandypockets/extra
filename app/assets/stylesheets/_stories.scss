@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 $primaryYellow: #FFC017;
 $primaryBlue: #174BFF;
-$primaryFont: monospace;
+$primaryFont: Newsreader;
 
 div.topics-container {
   display: flex;
@@ -160,6 +160,12 @@ img.story-header-img {
 
 
 // Story NEW
+p.new-story-body-field input#file-upload-button {
+  background: red;
+  display: none;
+}
+
+
 .new-story-container {
   display: flex;
   justify-content: center;
@@ -189,7 +195,7 @@ img.story-header-img {
 
     .new-story-col-2 {
       display: flex;
-      justify-content: space-evenly;
+      // justify-content: space-evenly;
       height: 3vh;
 
       .new-story-dropdown-field {
@@ -199,6 +205,8 @@ img.story-header-img {
         padding-top: 1.6em;
       }
     }
+
+
 
     select#story_topic {
       border: none;
@@ -218,10 +226,14 @@ img.story-header-img {
     input#story_title {
       width: 40vw;
       // padding-bottom: 3em;
-      margin-right: 0.4em;
+      // margin-right: 0.4em;
       border: none;
       font-size: 1.8em;
+    }
+
+    input#story_title::placeholder {
       font-family: $primaryFont;
+
     }
 
     input#story_title:hover {
