@@ -8,7 +8,7 @@
                 <% if story.image.thumb.present? %>
                   <%= image_tag story.image.thumb.url %>
                 <% end %>
-                <h4><%= link_to story.title, story_path(story) %> posted in <%= story.topic %></h4>
+                <h4><%= link_to story.title, story_path(story) %> posted in <%= link_to story.topic, root_path(topic: story.topic), active: { topic: story.topic } %></h4>
               </div>
       <% end %>
     <% else %>
