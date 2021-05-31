@@ -28,11 +28,10 @@
                   <% @story_id = story.story_id %>
                   <% @a_story = Story.find_by(id: @story_id) %>
                   <% if @a_story.image.thumb.present? %>
-                    <%= image_tag @story.image.thumb.url %>
+                    <%= image_tag @a_story.image.thumb.url %>
                   <% end %>
                   <h4><%= link_to @a_story.title, story_path(@a_story) %> posted in <%= @a_story.topic %></h4>
                 </div>
-                <%#= story.body %>
             <% end %>
           <% else %>
             <h3 class="no-favs"><%= @user.username.capitalize %> doesn't have any favourites yet!</h3>
@@ -44,3 +43,4 @@
     </div>
   </div>
 </div>
+
