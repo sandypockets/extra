@@ -100,11 +100,11 @@
       </div>
 
       <% if @story.comments.present? %>
-          <h4>Add a comment</h4>
+          <h3 class="add-a-comment">Join the conversation</h3>
         <% end %>
           <%= simple_form_for [@story, Comment.new] do |f| %>
           <%= f.rich_text_area :body %>
-          <%= f.button :submit, class: 'submit-comment-btn' %>
+          <%= f.button :submit, class: 'submit-comment-btn', value: 'Add Comment' %>
           <% end %>
       </div>
         </div>
