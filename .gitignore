@@ -45,3 +45,6 @@ yarn-debug.log*
 # Image uploads
 public/uploads/story
 public/uploads/user
+
+.DS_Store
+public/uploads/
