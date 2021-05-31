@@ -1,7 +1,3 @@
-<h1 align="center">
-⚠️ Work in progress ⚠️
-</h1>
-
 <h1 align="center">📰 Extra</h1>
 Extra is a blogging platform for sharing ideas, stories, and more. Extra was built with Ruby on Rails, and styled with Sass.
 
@@ -15,6 +11,7 @@ Extra is a blogging platform for sharing ideas, stories, and more. Extra was bui
 * Users can write, edit and delete (their own) stories
 * Users can comment on stories
 * Users can favourite stories
+* Users can see which stories have been favourited be other users
 * Users can filter stories by topic
 * Rich Text Editor for writing stories or comments
 
@@ -111,8 +108,14 @@ Stretch features to be implemented at a later date:
 * Users can favourite topics
 * Users can see which topics other users have marked as favourite
 * Password reset emails
+* Migrate front end from ERB to React
 
 ## 🎯 Wireframe
 * [Wireframe on Figma](https://www.figma.com/file/DH4RNUH5M46X7nSDhBvarF/Extra-Wireframe-GitHub?node-id=0%3A1)
+
+## Acknowledgements
+
+* [Lighthouse Labs](https://www.lighthouselabs.ca/)' instruction, providing me with the skills to create a Rails app from scratch.
+* [Undraw.co's](https://undraw.co/) free SVGs.
 
 ## 📸 Screenshots
