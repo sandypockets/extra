@@ -113,6 +113,22 @@ img.story-header-img {
       margin-top: 2em;
     }
 
+    div.story-actions form.button_to input {
+      border-radius: 5px;
+      border: $primaryYellow solid 1px;
+      background-color: $primaryYellow;
+      color: white;
+      transition: 0.5s;
+      box-shadow: 2px 2px 8px #ccc;
+    }
+
+    div.story-actions form.button_to input:hover {
+      border: black solid 1px;
+      background-color: white;
+      color: black;
+      transition: 0.5s;
+    }
+
     .story-comments-container {
       display: flex;
       justify-content: center;
