@@ -14,5 +14,9 @@ ActiveAdmin.register Story do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
+
+  def to_param
+    id.to_s + '-' + title.parameterize
+  end
   
 end
