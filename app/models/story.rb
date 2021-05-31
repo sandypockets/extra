@@ -15,7 +15,8 @@ class Story < ApplicationRecord
   mount_uploader :image, ImageUploader
 
   validates :title, presence: true
-  validates :body, presence: true, length: { minimum: 10 }
+  # Ensure stories are a minimum of 600 characters (about 1 paragraph)
+  validates :body, presence: true, length: { minimum: 600 }
 
   # Changing story URL from number to story title
   def to_param
