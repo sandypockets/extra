@@ -33,25 +33,14 @@
               <%= render inline: Rails.root.join('public/bookmark-solid.svg').read %>
                 </div>
             <% end %>
-            <%#= link_to "Remove favourite", story_favourite_path(@story), method: :delete %>
           <% else %>
             <div class="bookmark-svg">
             <%= link_to story_favourite_path(@story), method: :post do %>
               <%= render inline: Rails.root.join('public/bookmark-regular.svg').read %>
                 </div>
               <% end %>
-
-            <%#= link_to <svg></svg>, story_favourite_path(@story), method: :post %>
           <% end %>
         <% end %>
-
-        <%# if has_session? %>
-          <%# if @story.favourites.where(user: @current_user).any? %>
-            <%#= link_to "Remove favourite", story_favourite_path(@story), method: :delete %>
-          <%# else %>
-            <%#= link_to "Favourite", story_favourite_path(@story), method: :post %>
-          <%# end %>
-        <%# end %>
 
         <p><%= @story.body %></p>
       </div>
