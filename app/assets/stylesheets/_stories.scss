@@ -113,16 +113,17 @@ img.story-header-img {
       margin-top: 2em;
     }
 
-    div.story-actions form.button_to input {
+    div.story-actions a {
       border-radius: 5px;
       border: $primaryYellow solid 1px;
       background-color: $primaryYellow;
       color: white;
       transition: 0.5s;
       box-shadow: 2px 2px 8px #ccc;
+      padding: 0.3rem;
     }
 
-    div.story-actions form.button_to input:hover {
+    div.story-actions a:hover {
       border: black solid 1px;
       background-color: white;
       color: black;
