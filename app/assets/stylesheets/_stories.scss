@@ -372,6 +372,7 @@ h1.section-heading {
         padding: 1em;
         border-radius: 10px;
         transition: 0.5s;
+        animation: fadein 1.5s;
 
         a {
           color: #393939;
@@ -464,6 +465,26 @@ h1.section-heading {
   }
 }
 
+div.written-by {
+  height: 20px;
+  padding-top: 10px;
+
+  span {
+    color: #868686;
+  }
+
+  span a {
+    text-decoration: none;
+    color: #868686;
+    transition: 0.2s;
+  }
+
+  span:hover {
+    color: black;
+    transition: 0.2s;
+  }
+}
+
 .hero-line.mid {
   background-color: black;
   height: 1px;
@@ -533,4 +554,9 @@ input.submit-comment-btn:hover {
     fill: #ffc558;
     transition: 2s;
   }
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
