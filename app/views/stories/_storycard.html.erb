@@ -19,7 +19,7 @@
       </div>
       <%= story.body %>
         <div class="written-by">
-          <span>Written by <%= link_to story.user.username, user_path(story.user) %></span>
+          <span>Written by <span class="highlight"><%= link_to story.user.username.capitalize, user_path(story.user) %></span> in <span class="highlight"><%= link_to story.topic, root_path(topic: story.topic), active: { topic: story.topic } %></span></span>
         </div>
     </div>
 
