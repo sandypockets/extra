@@ -21,6 +21,7 @@ Extra is a blogging platform for sharing ideas, stories, and more. Extra was bui
 * Admins can create, edit, or delete stories, users, and comments
 * Admins can create new Admin users
 * Admins can create, edit, or delete static pages (About Us, Terms of Service, etc)
+* Admins can leave internal comments within the Admin dashboard
 
 ## 🛠 Getting Started
 
