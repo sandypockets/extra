@@ -1,6 +1,7 @@
 <h1 align="center">📰 Extra</h1>
 Extra is a blogging platform for sharing ideas, stories, and more. Extra was built with Ruby on Rails, and styled with Sass.
 
+![https://github.com/sandypockets/extra/blob/main/docs/extra-.png?raw=true](https://github.com/sandypockets/extra/blob/main/docs/extra-.png?raw=true)
 ----
 ## ✨ Features
 
@@ -120,3 +121,18 @@ Stretch features to be implemented at a later date:
 * [Undraw.co's](https://undraw.co/) free SVGs.
 
 ## 📸 Screenshots
+
+Homepage (Logged out)
+![https://github.com/sandypockets/extra/blob/main/docs/extra-.png?raw=true](https://github.com/sandypockets/extra/blob/main/docs/extra-.png?raw=true)
+
+Homepage (Logged in)
+![https://github.com/sandypockets/extra/blob/main/docs/extra-index.png?raw=true](https://github.com/sandypockets/extra/blob/main/docs/extra-index.png?raw=true)
+
+Write
+![https://github.com/sandypockets/extra/blob/main/docs/extra-write.png?raw=true](https://github.com/sandypockets/extra/blob/main/docs/extra-write.png?raw=true)
+
+Edit Profile
+![https://github.com/sandypockets/extra/blob/main/docs/extra-edit.png?raw=true](https://github.com/sandypockets/extra/blob/main/docs/extra-edit.png?raw=true)
+
+Admin Panel
+![https://github.com/sandypockets/extra/blob/main/docs/extra-admin.png?raw=true](https://github.com/sandypockets/extra/blob/main/docs/extra-admin.png?raw=true)
